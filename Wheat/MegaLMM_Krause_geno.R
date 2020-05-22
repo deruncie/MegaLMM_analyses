@@ -1,0 +1,135 @@
+library(data.table)
+library(rrBLUP)
+library(tidyr)
+library(lme4qtl)
+library(lme4)
+library(BSFG)
+set_BSFG_nthreads(RcppParallel::defaultNumThreads()-1)
+foldid = 1
+# foldid = as.numeric(commandArgs(t=T)[1])
+# if(is.na(foldid)) foldid = 1
+set.seed(foldid)
+
+
+source('data_prep_Krause.R')
+source('../Method_comparison/Estimate_gcor_prediction.R')
+
+foldid = as.numeric(commandArgs(t=T)[1])
+if(is.na(foldid)) foldid = 1
+set.seed(foldid)
+runID = sprintf('/group/runciegrp/Projects/BSFG/Krause/BSFG_Krause_X_%d',foldid)
+# runID = sprintf('/group/runciegrp/Projects/BSFG/Krause/BSFG_Krause_K_ARD_1_%d',foldid)
+# runID = sprintf('BSFG_Krause_K_%d',foldid)
+
+
+# predict_BSFG_X = function(data,X,HTP_wide,K_year,runID,nas) {
+  # run BSFG
+  run_parameters = BSFG_control(
+    # num_NA_groups = 0,
+    drop0_tol = 1e-10,
+    scale_Y = T,   # should the columns of Y be re-scaled to have mean=0 and sd=1?
+    simulation = FALSE, # Are you running against simulated data (ex from a call to new_halfSib_simulation above)? If so, you can provide the setup list and it will make some QC plots
+    h2_divisions = 2, # Each variance component is allowed to explain between 0% and 100% of the total variation. How many segments should the range [0,100) be divided into for each random effect?
+    h2_step_size = NULL, # if NULL, all possible values of random effects are tried each iteration. If in (0,1), a new candidate set of random effect proportional variances is drawn uniformily with a range of this size
+    burn = 00,  # number of burn in samples before saving posterior samples
+    K = 100 # number of factors
+  )
+
+  priors = BSFG_priors(
+    tot_Y_var = list(V = 0.5,   nu = 10),      # Prior variance of trait residuals after accounting for fixed effects and factors
+    tot_F_var = list(V = 18/20, nu = 20),     # Prior variance of factor traits. This is included to improve MCMC mixing, but can be turned off by setting nu very large
+    Lambda_prior = list(
+      sampler = sample_Lambda_prec_horseshoe,
+      prop_0 = 0.1,
+      delta = list(shape = 3, scale = 1)
+    ),
+    B2_prior = list(
+      sampler = sample_B2_prec_horseshoe,
+      prop_0 = 0.1
+    ),
+    # cis_effects_prior = list(
+    #   prec = 1
+    # ),
+    h2_priors_resids_fun = function(h2s,n)  1,  # Function that returns the prior density for any value of the h2s vector (ie the vector of random effect proportional variances across all random effects. 1 means constant prior. Alternative: pmax(pmin(ddirichlet(c(h2s,1-sum(h2s)),rep(2,length(h2s)+1)),10),1e-10),
+    h2_priors_factors_fun = function(h2s,n) 1 # See above. Another choice is one that gives 50% weight to h2==0: ifelse(h2s == 0,n,n/(n-1))
+  )
+
+  Y = cbind(data$yNA,HTP_wide[match(data$GID,HTP_wide$GID),-1])
+
+  Y = scale(Y)
+
+  BSFG_state = setup_model_BSFG(Y,            # n x p data matrix
+                                ~ 1 + (1|GID),
+                                extra_regressions = list(X = X,resids = F,factors=T),
+                                data=data,         # the data.frame with information for constructing the model matrices
+                                # relmat = list(GID = K_year), # covariance matrices for the random effects. If not provided, assume uncorrelated
+                                Lambda_fixed = matrix(c(1,rep(0,ncol(Y)-1))),
+                                run_parameters=run_parameters,
+                                run_ID = runID
+  )
+  # column_groups = unname(sapply(colnames(Y_BLUP),function(x) strsplit(x,'::')[[1]][2]))
+  maps = make_Missing_data_map(BSFG_state,2,verbose=T)
+  BSFG_state = set_Missing_data_map(BSFG_state,maps$Missing_data_map)
+  BSFG_state = set_priors_BSFG(BSFG_state,priors)
+  BSFG_state = initialize_variables_BSFG(BSFG_state)
+  BSFG_state_base = BSFG_state
+  BSFG_state = initialize_BSFG(BSFG_state)
+  BSFG_state = clear_Posterior(BSFG_state)
+
+  BSFG_state$Posterior$posteriorSample_params = c('Lambda','F_h2','B2_F')#,'Eta_mean')
+  # BSFG_state$Posterior$posteriorSample_params = c('Eta')#,'Eta_mean')
+  # BSFG_state$Posterior$posteriorMean_params = c()
+  BSFG_state = clear_Posterior(BSFG_state)
+
+  # set_BSFG_nthreads(7)
+  n_iter = 100;  # how many samples to collect at once?
+  # BSFG_state$current_state$B2_F_tau2
+  # BSFG_state$current_state$B2_F_prec[] = 1
+  # BSFG_state$current_state$B2_R_tau2 = c()
+  i=1
+  system(sprintf('rm %s/U_pred_samples.csv',runID))
+  for(i  in 1:40) {
+    print(sprintf('Run %d',i))
+    BSFG_state = sample_BSFG(BSFG_state,n_iter)  # run MCMC chain n_iter iterations. grainSize is a paramter for parallelization (smaller = more parallelization)
+
+
+    U = get_posterior_FUN(BSFG_state,X2_F %*% B2_F %*% t(Lambda[1:2,]))
+    U = U[,nas,1]
+    fwrite(as.data.table(U),file = sprintf('%s/U_pred_samples.csv',runID),append=T)
+
+    BSFG_state = save_posterior_chunk(BSFG_state)  # save any accumulated posterior samples in the database to release memory
+    print(BSFG_state) # print status of current chain
+    plot(BSFG_state) # make some diagnostic plots. These are saved in a pdf booklet: diagnostic_plots.pdf
+    # BSFG_state$Posterior = reload_Posterior(BSFG_state)
+    # b = get_posterior_mean(BSFG_state,X2_F %*% B2_F %*% t(Lambda))
+    # plot(apply(b,2,var))
+
+    # set of commands to run during burn-in period to help chain converge
+    if(BSFG_state$current_state$nrun < BSFG_state$run_parameters$burn || i <= 20) {
+      BSFG_state = reorder_factors(BSFG_state,drop_cor_threshold = 0.6) # Factor order doesn't "mix" well in the MCMC. We can help it by manually re-ordering from biggest to smallest
+      BSFG_state = clear_Posterior(BSFG_state)
+      print(BSFG_state$run_parameters$burn)
+    }
+  }
+
+  rm(BSFG_state)
+  gc()
+
+  # BSFG_state = list()
+  BSFG_state = BSFG_state_base
+  BSFG_state$Posterior = readRDS(sprintf('%s/Posterior/Posterior_base.rds',runID))
+
+  BSFG_state$Posterior$Lambda = load_posterior_param(BSFG_state,'Lambda')
+  BSFG_state$Posterior$B2_F = load_posterior_param(BSFG_state,'B2_F')
+  U = get_posterior_mean(BSFG_state,X2_F %*% B2_F %*% t(Lambda[1:2,]))
+
+
+
+  results = data.frame(Method = 'BSFG_X',
+                       pearson = cor(data$BLUP[nas],U[nas,1])/sqrt(h2_BLUE),
+                       g_cor = estimate_gcor(data.frame(ID=data$GID[nas],obs = data$BLUP[nas],pred = U[nas,1]),Knn,sKnn,method = 'MCMCglmm',normalize = T)[['g_cor']])
+  results$fold = foldid
+  write.csv(results,file = sprintf('%s/results_BSFG_X_fold_%d.csv',results_dir,foldid))
+
+
+
