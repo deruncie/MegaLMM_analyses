@@ -15,9 +15,6 @@ results = foreach(file = list.files(path=results_folder),.combine = 'rbind') %do
 }
 
 results = subset(results,Method != 'GBLUP_rrBLUP')
-# results = subset(results,!grepl('ARD',Method))
-# results = subset(results,!(grepl('BSFG',Method) & !grepl('ARD',Method)))
-results = subset(results,fold <= 20)
 
 results$Method = sub('_ARD','',results$Method)
 g_wide = pivot_wider(results,id_cols = 'fold',names_from = 'Method',values_from = 'g_cor')
@@ -25,13 +22,13 @@ g_wide = pivot_wider(results,id_cols = 'fold',names_from = 'Method',values_from 
 g_tall = pivot_longer(g_wide[,-1],cols = everything())
 g_tall = subset(g_tall,!grepl('best',name))
 g_tall$name = revalue(g_tall$name,c('BSFG' = 'MegaLMM\nGBLUP','BSFG_X' = 'MegaLMM\nHorseshoe','BSFG_RKHS' = 'MegaLMM\nRKHS','GBLUP_H' = 'HBLUP','GBLUP_KH' = 'GBLUP+H')) #,'GBLUP_Hbest' = 'GBLUP_H6'
-g_tall$name = factor(g_tall$name,levels = unique(g_tall$name)[c(4,8,7,5,6,1,3,2)])
+g_tall$name = factor(g_tall$name,levels = unique(g_tall$name)[c(4,8,7,5,6,1,2,3)])
 g_tall$HTP = g_tall$name %in% c('MegaLMM\nGBLUP','MegaLMM\nHorseshoe','MegaLMM\nRKHS','HBLUP','GBLUP+H')
 g_tall$MegaLMM = g_tall$name %in% c('MegaLMM\nGBLUP','MegaLMM\nHorseshoe','MegaLMM\nRKHS')
 
 (p1 <- ggplot(na.omit(g_tall),aes(x=name,y=value)) + geom_bar(stat = 'summary',fun.y = 'mean',aes(group = interaction(HTP,MegaLMM,name),fill = !MegaLMM)) +
   geom_errorbar(stat="summary", fun.data="mean_se",width=.3) +
-  facet_grid(~HTP,scales = 'free_x',space = 'free_x',labeller = labeller(HTP = c(`TRUE` = 'Multi-trait',`FALSE` = 'Single-trait'))) +
+  facet_grid(~HTP,scales = 'free_x',space = 'free_x',labeller = labeller(HTP = c(`TRUE` = 'Genomic data \nplus hyperspectral data',`FALSE` = 'Genomic data \nonly'))) +
   guides(fill = F) + #ylim(c(0,1)) +
   # xlab('Method') +
   xlab('') +
@@ -53,9 +50,9 @@ results$date = factor(results$date,levels = unique(results$date),labels = format
     facet_wrap(~date) +
     geom_hline(yintercept = 0,size=.25) +
     geom_ribbon(aes(ymin = G_cor_low,ymax = G_cor_high),alpha = 0.3) +
-    geom_line(aes(y = G_cor_mean,col = 'G')) +
-    geom_line(aes(y = P_cor,col = 'P')) +
-    scale_color_manual(values=c('G' = 'red','P' = 'black'),name = 'Correlation') +
+    geom_line(aes(y = G_cor_mean,col = 'Genetic')) +
+    geom_line(aes(y = P_cor,col = 'Phenotypic')) +
+    scale_color_manual(values=c('Genetic' = 'red','Phenotypic' = 'black'),name = 'Correlation') +
     xlab('Wavelength') + ylab('Correlation') +
     theme(legend.position = c(.8,.15)))
 
