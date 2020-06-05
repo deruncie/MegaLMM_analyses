@@ -1,4 +1,8 @@
 # code taken and adapted from the phytools package: https://cran.r-project.org/web/packages/phytools/index.html
+
+## function depends on phytools (& dependencies) and maps (& dependencies)
+## written by Liam J. Revell 2013, 2014, 2016, 2019
+
 my_phylo2map = function (x, type = c("phylogram", "direct"), ...)
 {
   type <- type[1]
