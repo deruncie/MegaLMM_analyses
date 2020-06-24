@@ -1,11 +1,11 @@
 library(data.table)
 library(rrBLUP)
 library(tidyr)
-library(BSFG)
+library(MegaLMM)
 
 source('../Method_comparison/Estimate_gcor_prediction.R')
 
-set_BSFG_nthreads(RcppParallel::defaultNumThreads()-1)
+set_MegaLMM_nthreads(RcppParallel::defaultNumThreads()-1)
 
 
 foldid = 1
@@ -70,11 +70,11 @@ nas = sample(1:nrow(data),.5*nrow(data))
 data$yNA = data$BLUE
 data$yNA[nas] = NA
 
-runID = sprintf('BSFG_Krause_K_%d',foldid)
+runID = sprintf('MegaLMM_Krause_K_%d',foldid)
 
 
-  # run BSFG
-  run_parameters = BSFG_control(
+  # run MegaLMM
+  run_parameters = MegaLMM_control(
     # num_NA_groups = 0,
     drop0_tol = 1e-10,
     scale_Y = T,   # should the columns of Y be re-scaled to have mean=0 and sd=1?
@@ -85,7 +85,7 @@ runID = sprintf('BSFG_Krause_K_%d',foldid)
     K = 100 # number of factors
   )
 
-  priors = BSFG_priors(
+  priors = MegaLMM_priors(
     tot_Y_var = list(V = 0.5,   nu = 10),      # Prior variance of trait residuals after accounting for fixed effects and factors
     tot_F_var = list(V = 18/20, nu = 20),     # Prior variance of factor traits. This is included to improve MCMC mixing, but can be turned off by setting nu very large
     Lambda_prior = list(                     # Prior fo rfactor loadings
@@ -104,7 +104,7 @@ runID = sprintf('BSFG_Krause_K_%d',foldid)
   # scaling is not necesary, but makes visualization easier
   Y = scale(Y)
 
-  BSFG_state = setup_model_BSFG(Y,            # n x p data matrix
+  MegaLMM_state = setup_model_MegaLMM(Y,            # n x p data matrix
                                 ~ 1 + (1|GID),   # in this case, only genotype ID used as a predictor
                                 data=data,         # the data.frame with information for constructing the model matrices
                                 relmat = list(GID = K_year), # covariance matrices for the random effects. If not provided, assume uncorrelated
@@ -112,18 +112,18 @@ runID = sprintf('BSFG_Krause_K_%d',foldid)
                                 run_ID = runID
   )
   # column_groups = unname(sapply(colnames(Y_BLUP),function(x) strsplit(x,'::')[[1]][2]))
-  maps = make_Missing_data_map(BSFG_state,2,verbose=T)    # depending on structure of missing data, might increase the 2nd argument
-  BSFG_state = set_Missing_data_map(BSFG_state,maps$Missing_data_map)
-  BSFG_state = set_priors_BSFG(BSFG_state,priors)
-  BSFG_state = initialize_variables_BSFG(BSFG_state)  # get starting values
+  maps = make_Missing_data_map(MegaLMM_state,2,verbose=T)    # depending on structure of missing data, might increase the 2nd argument
+  MegaLMM_state = set_Missing_data_map(MegaLMM_state,maps$Missing_data_map)
+  MegaLMM_state = set_priors_MegaLMM(MegaLMM_state,priors)
+  MegaLMM_state = initialize_variables_MegaLMM(MegaLMM_state)  # get starting values
 
-  BSFG_state = initialize_BSFG(BSFG_state)   # pre-calculate some matrix inverses
-  BSFG_state = clear_Posterior(BSFG_state)
+  MegaLMM_state = initialize_MegaLMM(MegaLMM_state)   # pre-calculate some matrix inverses
+  MegaLMM_state = clear_Posterior(MegaLMM_state)
 
-  BSFG_state$Posterior$posteriorSample_params = c('Lambda','U_F','U_R','Eta','F_h2')#,'Eta_mean')   # these are the ones to save for standard models
-  # BSFG_state$Posterior$posteriorSample_params = c('Eta')#,'Eta_mean')
-  # BSFG_state$Posterior$posteriorMean_params = c()
-  BSFG_state = clear_Posterior(BSFG_state)   # start with a clean (empty) set of posterior samples
+  MegaLMM_state$Posterior$posteriorSample_params = c('Lambda','U_F','U_R','Eta','F_h2')#,'Eta_mean')   # these are the ones to save for standard models
+  # MegaLMM_state$Posterior$posteriorSample_params = c('Eta')#,'Eta_mean')
+  # MegaLMM_state$Posterior$posteriorMean_params = c()
+  MegaLMM_state = clear_Posterior(MegaLMM_state)   # start with a clean (empty) set of posterior samples
 
 
   # for the MCMC, I generally break the chain into a set of chunks, so the model can be saved, checked, and adjusted throughout, rather than waiting until the end
@@ -131,37 +131,37 @@ runID = sprintf('BSFG_Krause_K_%d',foldid)
   system(sprintf('rm %s/U_pred_samples.csv',runID))
   for(i  in 1:40) {
     print(sprintf('Run %d',i))
-    BSFG_state = sample_BSFG(BSFG_state,n_iter,grainSize=1)  # run MCMC chain n_iter iterations. grainSize is a paramter for parallelization (smaller = more parallelization)
+    MegaLMM_state = sample_MegaLMM(MegaLMM_state,n_iter,grainSize=1)  # run MCMC chain n_iter iterations. grainSize is a paramter for parallelization (smaller = more parallelization)
 
     # assuming the focal trait is in column 1, this extracts the predictions of the masked data from just this trait and saves it to a file.
     # These predictions are not saved by default
-    U = get_posterior_FUN(BSFG_state,U_R[,1:2,drop=F] + U_F %*% t(Lambda[1:2,,drop=F]))
+    U = get_posterior_FUN(MegaLMM_state,U_R[,1:2,drop=F] + U_F %*% t(Lambda[1:2,,drop=F]))
     U = U[,nas,1]
     fwrite(as.data.table(U),file = sprintf('%s/U_pred_samples.csv',runID),append=T)
 
-    BSFG_state = save_posterior_chunk(BSFG_state)  # save any accumulated posterior samples in the database to release memory
-    print(BSFG_state) # print status of current chain
-    plot(BSFG_state) # make some diagnostic plots. These are saved in a pdf booklet: diagnostic_plots.pdf
+    MegaLMM_state = save_posterior_chunk(MegaLMM_state)  # save any accumulated posterior samples in the database to release memory
+    print(MegaLMM_state) # print status of current chain
+    plot(MegaLMM_state) # make some diagnostic plots. These are saved in a pdf booklet: diagnostic_plots.pdf
 
     # set of commands to run during burn-in period to help chain converge
-    if(BSFG_state$current_state$nrun < BSFG_state$run_parameters$burn || i <= 20) {
-      BSFG_state = reorder_factors(BSFG_state,drop_cor_threshold = 0.6) # Factor order doesn't "mix" well in the MCMC. We can help it by manually re-ordering from biggest to smallest
-      BSFG_state = clear_Posterior(BSFG_state)
-      print(BSFG_state$run_parameters$burn)
+    if(MegaLMM_state$current_state$nrun < MegaLMM_state$run_parameters$burn || i <= 20) {
+      MegaLMM_state = reorder_factors(MegaLMM_state,drop_cor_threshold = 0.6) # Factor order doesn't "mix" well in the MCMC. We can help it by manually re-ordering from biggest to smallest
+      MegaLMM_state = clear_Posterior(MegaLMM_state)
+      print(MegaLMM_state$run_parameters$burn)
     }
   }
 
   # now that the chain is done, we can re-load the posterior samples, and summarize
-  BSFG_state$Posterior = readRDS(sprintf('%s/Posterior/Posterior_base.rds',runID))
-  # U = get_posterior_mean(BSFG_state,U_R + U_F %*% t(Lambda),bychunk = T)
-  U = get_posterior_mean(BSFG_state,U_R[,1:2,drop=F] + U_F %*% t(Lambda[1:2,,drop=F]),bychunk = T)
+  MegaLMM_state$Posterior = readRDS(sprintf('%s/Posterior/Posterior_base.rds',runID))
+  # U = get_posterior_mean(MegaLMM_state,U_R + U_F %*% t(Lambda),bychunk = T)
+  U = get_posterior_mean(MegaLMM_state,U_R[,1:2,drop=F] + U_F %*% t(Lambda[1:2,,drop=F]),bychunk = T)
 
 
   # code for estimating prediction accuracy. First is pearson correlation which is biased if traits are measured on the same plots. The second is the more robust method, but takes much longer.
-  results = data.frame(Method = 'BSFG',
+  results = data.frame(Method = 'MegaLMM',
                        pearson = cor(data$BLUP[nas],U[nas,1])/sqrt(h2_BLUE),
                        g_cor = estimate_gcor(data.frame(ID=data$GID[nas],obs = data$BLUP[nas],pred = U[nas,1]),Knn,sKnn,method = 'MCMCglmm',normalize = T)[['g_cor']])
   results$fold = foldid
-  write.csv(results,file = sprintf('%s/results_BSFG_fold_%d.csv',results_dir,foldid))
+  write.csv(results,file = sprintf('%s/results_MegaLMM_fold_%d.csv',results_dir,foldid))
 
 
