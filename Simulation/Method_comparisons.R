@@ -14,44 +14,31 @@ library(dplyr)
 library(foreach)
 library(doParallel)
 library(tidyr)
+library(rstan)
 
 seed = as.numeric(commandArgs(t=T)[1])
-if(is.na(seed)) seed = 1
+if(is.na(seed)) seed = 01
 seed = seed + 00
 n_threads=RcppParallel::defaultNumThreads()-1
 registerDoParallel(n_threads)
 set.seed(seed)
 
-# dataset = 'MODEM'
 dataset = 'At_1001'
 results_dir = sprintf('Results_%s',dataset)
 predictions_dir = sprintf('Predictions_%s',dataset)
 try(dir.create(results_dir))
 try(dir.create(predictions_dir))
 
-if(dataset == 'At_1001') {
-  K = read.csv('Data/AT_GE_K.csv',check.names = F,row.names=1)
-  K = as.matrix(K)
-  K = K + diag(1e-10,nrow(K))
+K = read.csv('Data/AT_GE_K.csv',check.names = F,row.names=1)
+K = as.matrix(K)
+K = K + diag(1e-10,nrow(K))
 
-  vst_matrix = fread('Data/At_GE_VST.csv',data.table=F,header = T)
-  rownames(vst_matrix) = vst_matrix[,1]
-  vst_matrix = vst_matrix[,-1]
-  vst_matrix = as.matrix(vst_matrix)
-  vst_matrix = vst_matrix[,match(rownames(K),colnames(vst_matrix))]
-  Y_all = t(vst_matrix)
-} else if(dataset == 'MODEM') {
-  K = read.delim('Data/full_kinship.txt',skip=1,h=F)
-  rownames(K) = K[,1]
-  rownames(K) = sapply(rownames(K),function(x) strsplit(x,':')[[1]][1])
-  K = as.matrix(K[,-1])
-  colnames(K) = rownames(K)
-  Y_all = fread('Data/MaizeGo_expression.txt',data.table=F,h=T)
-  rownames(Y_all) = Y_all[,1]
-  Y_all = Y_all[,-1]
-  Y_all = t(Y_all)
-}
-
+vst_matrix = fread('Data/At_GE_VST.csv',data.table=F,header = T)
+rownames(vst_matrix) = vst_matrix[,1]
+vst_matrix = vst_matrix[,-1]
+vst_matrix = as.matrix(vst_matrix)
+vst_matrix = vst_matrix[,match(rownames(K),colnames(vst_matrix))]
+Y_all = t(vst_matrix)
 
 Y_all = scale(Y_all)
 # Y_all = Y_all[1:50,]
@@ -62,7 +49,7 @@ K = K[as.character(data_full$ID),as.character(data_full$ID)]
 n = nrow(K)
 data = data.frame(ID = rownames(K))
 
-tmpdir = sprintf('%s_tmp_%03d',dataset,seed)
+tmpdir = sprintf('%s_tmp_%03d_all',dataset,seed)
 dir.create(tmpdir)
 setwd(tmpdir)
 
@@ -103,35 +90,11 @@ write.table(grm,file = 'AT_train.grm',sep=' ',col.names=F,row.names=F,quote=F)
 # # do eig
 system(sprintf('../Software/mtg2 -p AT_train.fam -g AT_train.grm -pca %d',n_train))
 
-priors = MegaLMM_priors(
-  tot_Y_var = list(V = 0.5,   nu = 5),      # Prior variance of trait residuals after accounting for fixed effects and factors
-  tot_F_var = list(V = 18/20, nu = 20),     # Prior variance of factor traits. This is included to improve MCMC mixing, but can be turned off by setting nu very large
-  Lambda_prior = list(
-    sampler = sample_Lambda_prec_horseshoe,
-    prop_0 = 0.1,
-    delta = list(shape = 3, scale = 1),
-    delta_iterations_factor = 100
-  ),
-  # Lambda_prior = list(
-  #   sampler = sample_Lambda_prec_ARD,
-  #   Lambda_df = 3,
-  #   delta_1 = list(shape = 20, rate = 1/2),
-  #   delta_2 = list(shape = 3, rate = 1)
-  # ),
-  B2_prior = list(
-    sampler = sample_B2_prec_horseshoe,
-    prop_0 = 0.1
-  ),
-  cis_effects_prior = list(
-    prec = 1
-  ),
-  h2_priors_resids_fun = function(h2s,n)  1,  # Function that returns the prior density for any value of the h2s vector (ie the vector of random effect proportional variances across all random effects. 1 means constant prior. Alternative: pmax(pmin(ddirichlet(c(h2s,1-sum(h2s)),rep(2,length(h2s)+1)),10),1e-10),
-  h2_priors_factors_fun = function(h2s,n) 1 # See above. Another choice is one that gives 50% weight to h2==0: ifelse(h2s == 0,n,n/(n-1))
-)
-
 p_test = 1
-ps = 2^c(2:13,log2(ncol(Yn)-p_test)) + p_test
-# ps = 2^c(5:11,log2(ncol(Yn)-p_test))+p_test
+# ps = 2^c(2:13) + p_test
+# ps = 2^c(13) + p_test
+ps = c(2^c(5:13)+p_test,ncol(Yn))
+# ps = ncol(Yn)
 results = c()
 g_cor_results = c()
 Gs = list()
@@ -140,9 +103,13 @@ p=4 + p_test
 t=1
 # traits = c(traits[1],traits)
 
-predictions = list()
-predictions[['obs']] = Yn[,traits[1]]
+predictions_mat = c()
+Lambda_stats = c()
+
+# r = list()
 for(p in ps) {
+  predictions = list()
+  predictions[['obs']] = Yn[,traits[1]]
   print(p)
   set.seed(seed)
   traits_p = traits[1:p]
@@ -158,8 +125,8 @@ for(p in ps) {
 
     # run MTG2
     time = system.time(mtg_conv <- system(sprintf('../Software/mtg2 -p AT_train.fam -d AT_train.phen -eig AT_train.grm -bv AT_train.bv -out AT_train.out -mod %d -cove 1 -thread %d -nit 1000',p,n_threads),intern = T))
-    fixef = unlist(fread('head -n1 AT_train.bv',data.table=F)[1,]) # On Mac OSX
-    # fixef = fread('AT_train.bv.fsl',data.table=F,h=T)[,2] # on Unix
+    # fixef = unlist(fread('head -n1 AT_train.bv',data.table=F)[1,]) # On Mac OSX
+    fixef = fread('AT_train.bv.fsl',data.table=F,h=T)[,2] # on Unix
     bv = fread('tail -n+2 AT_train.bv',data.table=F,fill=T)#[-1,1:2]
     bv = as.data.frame(tidyr::pivot_wider(cbind(ID = fam[,1],bv),names_from = 'V1',values_from = 'V2'))
     rownames(bv) = bv$ID
@@ -245,35 +212,49 @@ for(p in ps) {
    }
 
   if(p < n) {
-    time = system.time(m5 <- phenix(Yp_joint,Q = sK$u,lam_K = sK$d))
-
-    pred = m5$U[1:n_test,1:p_test,drop=FALSE]
-    predictions[[paste('phenix',p-1,sep='.')]] = pred
-
-    results = bind_rows(results,data.frame(Method = 'phenix',p = p-p_test,time = time[3]))
+    try({
+      time = system.time(m5 <- phenix(Yp_joint,Q = sK$u,lam_K = sK$d))
+  
+      pred = m5$U[1:n_test,1:p_test,drop=FALSE]
+      predictions[[paste('phenix',p-1,sep='.')]] = pred
+  
+      results = bind_rows(results,data.frame(Method = 'phenix',p = p-p_test,time = time[3]))
+    })
   }
 
   #MegaLMM
+  for(k_factor in c(.5,1,2)) {
+    k = ceiling(max(4,floor(min(n/4,p/2))) * k_factor)
     run_parameters = MegaLMM_control(
       max_NA_groups = 2,
       save_current_state = FALSE,
       scale_Y = FALSE,   # should the columns of Y be re-scaled to have mean=0 and sd=1?
-      simulation = F, # Are you running against simulated data (ex from a call to new_halfSib_simulation above)? If so, you can provide the setup list and it will make some QC plots
       h2_divisions = 20, # Each variance component is allowed to explain between 0% and 100% of the total variation. How many segments should the range [0,100) be divided into for each random effect?
       h2_step_size = NULL, # if NULL, all possible values of random effects are tried each iteration. If in (0,1), a new candidate set of random effect proportional variances is drawn uniformily with a range of this size
-      burn = 5000,  # number of burn in samples before saving posterior samples
+      burn = 0000,  # number of burn in samples before saving posterior samples
       thin = 2,
-      K = max(4,floor(min(n/4,p/4))) # number of factors
+      K = k # number of factors
     )
-
+    
+    priors = MegaLMM_priors(
+      tot_Y_var = list(V = 0.5,   nu = 5),      # Prior variance of trait residuals after accounting for fixed effects and factors
+      tot_F_var = list(V = 18/20, nu = 20),     # Prior variance of factor traits. This is included to improve MCMC mixing, but can be turned off by setting nu very large
+      Lambda_prior = list(
+        sampler = sample_Lambda_prec_horseshoe,
+        prop_0 = 0.1,
+        delta = list(shape = 3, scale = 1),
+        delta_iterations_factor = 100
+      ),
+      h2_priors_resids_fun = function(h2s,n) 1,  # Function that returns the prior density for any value of the h2s vector (ie the vector of random effect proportional variances across all random effects. 1 means constant prior. Alternative: pmax(pmin(ddirichlet(c(h2s,1-sum(h2s)),rep(2,length(h2s)+1)),10),1e-10),
+      h2_priors_factors_fun = function(h2s,n) 1 # See above. Another choice is one that gives 50% weight to h2==0: ifelse(h2s == 0,n,n/(n-1))
+    )
+    
     MegaLMM_state = setup_model_MegaLMM(Yp_joint,            # n x p data matrix
                                   ~(1|ID),  # RHS of base model for factors and residuals. Fixed effects defined here only apply to the factor residuals.
-                                  # extra_regressions = list(X = model.matrix(~Fixed1,data)[,-1,drop=FALSE],factors=T,resids=F), # design matrix for additional fixed effects. These coefficients will be regularized with the B2_prior above. The same model can be used for both factors and resids
                                   data=data_full,         # the data.frame with information for constructing the model matrices
                                   relmat = list(ID = K), # covariance matrices for the random effects. If not provided, assume uncorrelated
                                   run_parameters=run_parameters,
-                                  # setup = setup, # only if running simulated data. Stores simulated values for comparison
-                                  run_ID = 'MegaLMM_AT_1'
+                                 run_ID = 'MegaLMM_AT_1'
     )
     maps = make_Missing_data_map(MegaLMM_state)
     MegaLMM_state = set_Missing_data_map(MegaLMM_state,maps$Missing_data_map)
@@ -281,70 +262,75 @@ for(p in ps) {
     MegaLMM_state = set_priors_MegaLMM(MegaLMM_state,priors)
     MegaLMM_state = initialize_variables_MegaLMM(MegaLMM_state)
     MegaLMM_state = initialize_MegaLMM(MegaLMM_state)
-    MegaLMM_state$Posterior$posteriorSample_params = c('Lambda','U_F','U_R','F_h2','tot_Eta_prec','resid_h2','B1')
+    MegaLMM_state$Posterior$posteriorSample_params = c('Lambda_m_eff')#
+    MegaLMM_state$Posterior$posteriorFunctions = list(factor_var = 'get_factor_variance(MegaLMM_state)'
+                                                      # ,pred = 'Z[1:n_test,,drop=FALSE] %*% (U_R[,1:p_test,drop=FALSE] + U_F %*% Lambda[,1:p_test,drop=FALSE])'
+    )
     MegaLMM_state = clear_Posterior(MegaLMM_state)
 
     n_samples = 7000
-    U_samples = c()
     p2 = min(100,p)
-    pred_samples = c()
-    g_samples = c()
     time = system.time({
       for(i in 1:10) {
         print(i)
-        MegaLMM_state <- sample_MegaLMM(MegaLMM_state,run_parameters$burn/10)
         MegaLMM_state = reorder_factors(MegaLMM_state,drop_cor_threshold = 0.6) # Factor order doesn't "mix" well in the MCMC. We can help it by manually re-ordering from biggest to smallest
-        MegaLMM_state = clear_Posterior(MegaLMM_state)
+        MegaLMM_state <- sample_MegaLMM(MegaLMM_state,500)
+        Lambda_stats = dplyr::bind_rows(Lambda_stats,data.frame(
+          trait = colnames(Yo)[traits_p[1]],
+          p = p, k_factor = k_factor,k=k,i=i,factor=1:k,
+          Lambda_m_eff = MegaLMM::get_posterior_mean(MegaLMM_state$Posterior$Lambda_m_eff)[,1],
+          factor_var = MegaLMM::get_posterior_mean(MegaLMM_state$Posterior$factor_var)[,1]
+        ))
       }
+      MegaLMM_state$Posterior$posteriorSample_params = c('Lambda_m_eff')#
+      MegaLMM_state$Posterior$posteriorFunctions = list(factor_var = 'get_factor_variance(MegaLMM_state)'
+                                                        ,pred = 'Z[1:n_test,,drop=FALSE] %*% (U_R[,1:p_test,drop=FALSE] + U_F %*% Lambda[,1:p_test,drop=FALSE])'
+                                                        ,U_samples = 'U_R[,1:p2] + U_F %*% Lambda[,1:p2]'
+      )
       MegaLMM_state = clear_Posterior(MegaLMM_state)
-      for(i in 1:((n_samples-run_parameters$burn)/(10*run_parameters$thin))) {
-        print(i)
-        MegaLMM_state <- sample_MegaLMM(MegaLMM_state,10*run_parameters$thin)
-        U_samples_new = get_posterior_FUN(MegaLMM_state,U_R[,1:p2] + U_F %*% Lambda[,1:p2])
-        U_samples = abind::abind(U_samples,U_samples_new,along=1)
-        pred_samples_new = get_posterior_FUN(MegaLMM_state,Z[1:n_test,,drop=FALSE] %*% (U_R[,1:p_test,drop=FALSE] + U_F %*% Lambda[,1:p_test,drop=FALSE]))
-        pred_samples = abind::abind(pred_samples,pred_samples_new,along=1)
-        MegaLMM_state = clear_Posterior(MegaLMM_state)
-      }
+      MegaLMM_state <- sample_MegaLMM(MegaLMM_state,n_samples - MegaLMM_state$current_state$nrun)
+      pred_samples = MegaLMM_state$Posterior$pred
+      U_samples = MegaLMM_state$Posterior$U_samples
     })
-    # plot(MegaLMM_state)
     pred = MegaLMM::get_posterior_mean(pred_samples)
-    predictions[[paste('MegaLMM',p-1,sep='.')]] = pred
+    predictions[[paste(sprintf('MegaLMM_%0.2f_',k_factor),p-1,sep='.')]] = pred
     # system(sprintf('rm -rf %s',MegaLMM_state$Posterior$folder))
 
-    pred_samples1 = pred_samples
     ess = apply(U_samples[,-c(1:n_test),],c(2,3),ess_bulk)
 
-    results = bind_rows(results,data.frame(Method = 'MegaLMM',p = p-p_test,time = time[3],matrix(quantile(c(ess),seq(0,1,by=.1)),nr=1)))
+    results = bind_rows(results,data.frame(Method = sprintf('MegaLMM_%0.2f_',k_factor),p = p-p_test,time = time[3],matrix(quantile(c(ess),seq(0,1,by=.1)),nr=1)))
+  }
 
   # rrBLUP
     res_rrBLUP = mixed.solve(Yp_joint[,1],K=K)
     pred = matrix(res_rrBLUP$u[1:n_test],nc=1)
 
     predictions[[paste('rrBLUP',p-1,sep='.')]] = pred
-
+    
   # collect results
-  predictions_mat = do.call(cbind,predictions)
-  colnames(predictions_mat) = names(predictions)
-  
   g_cor_MCMCglmm = foreach(res = predictions[-1],.combine = 'rbind') %dopar% {
     if(!is.null(dim(res))) res = res[,1]
     estimate_gcor(data.frame(ID=data_test$ID,obs = predictions$obs,pred = res),Knn,sKnn,method = 'MCMCglmm',normalize = T)
   }
   
-  new_predictions = which(sapply(names(predictions),function(x) strsplit(x,'.',fixed=T)[[1]][2]) == p-1)
+  predictions_methods = sapply(names(predictions),function(x) paste(head(strsplit(x,'.',fixed=T)[[1]],n=-1),collapse='.'))
+  predictions_ps = sapply(names(predictions),function(x) tail(strsplit(x,'.',fixed=T)[[1]],n=1))
+  new_predictions = which(predictions_ps == p-1)
   new_predictions = na.omit(new_predictions)
   g_cor_results = rbind(g_cor_results,
-                      data.frame(method = sapply(names(predictions)[new_predictions],function(x) strsplit(x,'.',fixed=T)[[1]][1]),
-                       p = sapply(names(predictions)[new_predictions],function(x) strsplit(x,'.',fixed=T)[[1]][2]),
-                       trait = traits_p[1],
+                      data.frame(method = predictions_methods[new_predictions],
+                       p = predictions_ps[new_predictions],
+                       trait = colnames(Yo)[traits_p[1]],
                        p_cor = sapply(predictions[new_predictions],function(pred) cor(predictions$obs,c(pred))),
                        g_cor = g_cor_MCMCglmm[,'g_cor'],
                        Rhat = g_cor_MCMCglmm[,'Rhat'])
                 )
-  write.csv(g_cor_results,file = sprintf('../%s/Gcor_%03d.csv',results_dir,seed),row.names=F)
+  write.csv(g_cor_results,file = sprintf('../%s/Gcor_%03d_subset3.csv',results_dir,seed),row.names=F)
   
-  write.csv(results,file = sprintf('../%s/Times_%s.csv',results_dir,tmpdir),row.names=F)
-  write.csv(predictions_mat,file = sprintf('../%s/predictions_mat_%s.csv',predictions_dir,tmpdir),row.names = F)
-  
+  write.csv(results,file = sprintf('../%s/Times_%s_subset3.csv',results_dir,tmpdir),row.names=F)
+  predictions_mat_new = do.call(cbind,predictions)
+  colnames(predictions_mat_new) = names(predictions)
+  predictions_mat = cbind(predictions_mat,predictions_mat_new)
+  write.csv(predictions_mat,file = sprintf('../%s/predictions_mat_%s_subset3.csv',predictions_dir,tmpdir),row.names = F)
+  write.csv(Lambda_stats,file = sprintf('../%s/Lambda_stats_mat_%03d_subset3.csv',results_dir,seed),row.names = F)
 }

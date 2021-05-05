@@ -1,5 +1,12 @@
 *.DS_Store
 G2F/*/
 Simulation/*/
+!Simulation/Results/
 Wheat/*/
+!Wheat/Results/
 Xu_Rice*
+model*
+Results_At_1001*
+Results_G_accuracy_At_1001*
+Predictions_At_1001*
+Wheat_old*

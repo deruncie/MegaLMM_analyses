@@ -9,6 +9,8 @@ Data processing was done with `Prep_data.R`
 
 ## Analyses
 
-The script `Method_comparisons_clean.R` runs all analyses. It can be parallelized with `Submit_runs.sh`
+The script `Method_comparisons_clean.R` runs the  analyses. It can be parallelized with `Submit_runs.sh`
 
-The script `Collect_results.R` makes the figures
+The script `Collect_results.R` collects files from parallelized runs.
+
+The script `Make_figures.R` makes the figures.

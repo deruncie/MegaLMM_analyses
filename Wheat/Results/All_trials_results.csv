@@ -1,0 +1,2046 @@
+"Trial","Name","Method","pearson","g_cor","fold","year","trt"
+"2013-14
+Moderate Drought","H","GBLUP",0.380595972677306,0.240296884248202,1,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H","HBLUP",0.706476843833411,0.368393737592117,1,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H","GBLUP+H",0.713588399256423,0.466861904898975,1,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_2.csv","GBLUP",0.3462339097677,0.345691449217772,2,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_2.csv","HBLUP",0.532914102751754,0.370531249516538,2,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_2.csv","GBLUP+H",0.628298340474106,0.533937176987811,2,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_3.csv","GBLUP",0.448481391627026,0.553173490130184,3,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_3.csv","HBLUP",0.620913717100367,0.335926440653815,3,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_3.csv","GBLUP+H",0.693506045356632,0.648329829446459,3,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_4.csv","GBLUP",0.463083925062996,0.413355264068733,4,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_4.csv","HBLUP",0.704046953784612,0.297228911833102,4,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_4.csv","GBLUP+H",0.79765567298985,0.537339265141512,4,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_5.csv","GBLUP",0.462516462557738,0.588355469138588,5,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_5.csv","HBLUP",0.638554773798971,0.37286470383135,5,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","H_fold_5.csv","GBLUP+H",0.710062611451247,0.611719744766619,5,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM","MegaLMM
+GBLUP",0.722524972284754,0.440789653804369,1,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.702533944442766,0.548939468891675,2,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.7675914168814,0.698336166719474,3,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.682135162065868,0.570062890034468,4,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.589959535286687,0.622140308010459,5,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.456882416991929,0.22635177143139,1,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.468711576534389,0.377572998440904,2,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.559123680850183,0.585013497992427,3,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.450559753566215,0.334443061964566,4,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.481597923904188,0.493879404654068,5,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_RKHS","MegaLMM
+RKHS",0.836969514809283,0.423419411681507,1,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.83803840452727,0.568377432405477,2,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.771286232295052,0.667918629418513,3,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.842043923134218,0.606797894994875,4,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.679430862640067,0.61485923247967,5,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate","RKHS",0.546134118139937,0.311681763927107,1,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate","Bayesian
+Lasso",0.494174901604025,0.241033789124869,1,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate_fold_2.csv","RKHS",0.569277989994827,0.423008304912022,2,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate_fold_2.csv","Bayesian
+Lasso",0.48857966858121,0.326349132468903,2,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate_fold_3.csv","RKHS",0.661263646429403,0.641106508400511,3,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate_fold_3.csv","Bayesian
+Lasso",0.576585232791294,0.573915194852692,3,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate_fold_4.csv","RKHS",0.525358161613633,0.419944176705862,4,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate_fold_4.csv","Bayesian
+Lasso",0.473915505529283,0.360113161598232,4,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate_fold_5.csv","RKHS",0.492364469770205,0.613981152922302,5,"2013-14","Moderate Drought"
+"2013-14
+Moderate Drought","univariate_fold_5.csv","Bayesian
+Lasso",0.47168228688004,0.472920553004379,5,"2013-14","Moderate Drought"
+"2013-14
+Optimal Bed","H","GBLUP",0.387852174948434,0.605671682230104,1,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H","HBLUP",0.530404377756986,0.452395617605706,1,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H","GBLUP+H",0.563190734974001,0.592856587824679,1,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_2.csv","GBLUP",0.331374677310129,0.448874195690923,2,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_2.csv","HBLUP",0.449864905583414,0.312568229872789,2,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_2.csv","GBLUP+H",0.491405093496137,0.409990593717732,2,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_3.csv","GBLUP",0.312133974900709,0.394257855794811,3,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_3.csv","HBLUP",0.446928418900221,0.30224584193893,3,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_3.csv","GBLUP+H",0.490970571596081,0.431638071686845,3,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_4.csv","GBLUP",0.333948901201421,0.380873183062997,4,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_4.csv","HBLUP",0.446941916789973,0.354904580995712,4,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_4.csv","GBLUP+H",0.489387279405976,0.40629957548162,4,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_5.csv","GBLUP",0.286713495782751,0.160523985816251,5,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_5.csv","HBLUP",0.416816363192936,0.380486005777862,5,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","H_fold_5.csv","GBLUP+H",0.456644716440334,0.43182267772016,5,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM","MegaLMM
+GBLUP",0.675928216281826,0.611290676993284,1,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.595381811161519,0.549981745418668,2,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.647014379258359,0.563883233879157,3,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.620901811046917,0.470625376081921,4,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.625092568472014,0.354916202103065,5,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.505529512967355,0.458453347107661,1,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.453303840076376,0.40457157070255,2,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.472697065294114,0.431341784068245,3,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.486290098161131,0.356338863351119,4,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.463080109523767,0.192477773261716,5,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_RKHS","MegaLMM
+RKHS",0.792848269415353,0.633452168180221,1,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.638275996788496,0.575725205002936,2,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.724912740751192,0.516888815747379,3,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.786864670723518,0.582310095055349,4,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.63857256364594,0.44014450926217,5,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate","RKHS",0.563671655581563,0.524117488368727,1,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate","Bayesian
+Lasso",0.520903503871524,0.549514824856217,1,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate_fold_2.csv","RKHS",0.462181955256079,0.55674505773505,2,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate_fold_2.csv","Bayesian
+Lasso",0.422991789370777,0.381232162808149,2,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate_fold_3.csv","RKHS",0.523539524589279,0.444065722853723,3,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate_fold_3.csv","Bayesian
+Lasso",0.457003502815823,0.41645827662652,3,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate_fold_4.csv","RKHS",0.582405980415587,0.385800412137048,4,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate_fold_4.csv","Bayesian
+Lasso",0.491838148482084,0.334594303012116,4,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate_fold_5.csv","RKHS",0.550998349086493,0.269385860725858,5,"2013-14","Optimal Bed"
+"2013-14
+Optimal Bed","univariate_fold_5.csv","Bayesian
+Lasso",0.468314422491,0.161683806318029,5,"2013-14","Optimal Bed"
+"2013-14
+Heat","H","GBLUP",0.353316761875079,0.352531755125029,1,"2013-14","Heat"
+"2013-14
+Heat","H","HBLUP",0.836750885958536,0.587049767815823,1,"2013-14","Heat"
+"2013-14
+Heat","H","GBLUP+H",0.853191868659985,0.687427211485045,1,"2013-14","Heat"
+"2013-14
+Heat","H_fold_2.csv","GBLUP",0.381400274273131,0.43839417651981,2,"2013-14","Heat"
+"2013-14
+Heat","H_fold_2.csv","HBLUP",0.810430136454555,0.536391275795237,2,"2013-14","Heat"
+"2013-14
+Heat","H_fold_2.csv","GBLUP+H",0.814775728908915,0.577865641142769,2,"2013-14","Heat"
+"2013-14
+Heat","H_fold_3.csv","GBLUP",0.327401364365334,0.372756566408494,3,"2013-14","Heat"
+"2013-14
+Heat","H_fold_3.csv","HBLUP",0.790940730919276,0.507793249198676,3,"2013-14","Heat"
+"2013-14
+Heat","H_fold_3.csv","GBLUP+H",0.802736123536957,0.5268895371752,3,"2013-14","Heat"
+"2013-14
+Heat","H_fold_4.csv","GBLUP",0.242102590982172,0.316827691447125,4,"2013-14","Heat"
+"2013-14
+Heat","H_fold_4.csv","HBLUP",0.774387287105923,0.57863783893871,4,"2013-14","Heat"
+"2013-14
+Heat","H_fold_4.csv","GBLUP+H",0.774703847930697,0.527890871175348,4,"2013-14","Heat"
+"2013-14
+Heat","H_fold_5.csv","GBLUP",0.459782360346786,0.631095022031624,5,"2013-14","Heat"
+"2013-14
+Heat","H_fold_5.csv","HBLUP",0.873618013999373,0.422077610274282,5,"2013-14","Heat"
+"2013-14
+Heat","H_fold_5.csv","GBLUP+H",0.874156716007612,0.533258728587877,5,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM","MegaLMM
+GBLUP",0.738981495222298,0.748692854107324,1,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.772815669381941,0.717642224656556,2,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.850667502375381,0.690660748060082,3,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.52718785802148,0.590577995135497,4,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.697794161652638,0.728287978455938,5,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.376915308281628,0.29062787466249,1,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.447602699652531,0.376655497140617,2,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.399058448791698,0.298753772824737,3,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.25954969520596,0.327156607001995,4,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.465437501350788,0.648413043832712,5,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_RKHS","MegaLMM
+RKHS",0.888504228180867,0.849161194552253,1,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.988845490239489,0.740220667881799,2,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.0561354418613,0.699929579844338,3,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.718821964500689,0.66188262392425,4,"2013-14","Heat"
+"2013-14
+Heat","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.917211434895222,0.719247209421954,5,"2013-14","Heat"
+"2013-14
+Heat","univariate","RKHS",0.410097696252819,0.393706858694892,1,"2013-14","Heat"
+"2013-14
+Heat","univariate","Bayesian
+Lasso",0.376388522997427,0.368297702606862,1,"2013-14","Heat"
+"2013-14
+Heat","univariate_fold_2.csv","RKHS",0.531894087322671,0.495762321354782,2,"2013-14","Heat"
+"2013-14
+Heat","univariate_fold_2.csv","Bayesian
+Lasso",0.482389955384885,0.428021673428842,2,"2013-14","Heat"
+"2013-14
+Heat","univariate_fold_3.csv","RKHS",0.539608740741805,0.465015420002501,3,"2013-14","Heat"
+"2013-14
+Heat","univariate_fold_3.csv","Bayesian
+Lasso",0.450539429055443,0.365604366641676,3,"2013-14","Heat"
+"2013-14
+Heat","univariate_fold_4.csv","RKHS",0.280241983376463,0.371383272848497,4,"2013-14","Heat"
+"2013-14
+Heat","univariate_fold_4.csv","Bayesian
+Lasso",0.244314389102111,0.306809615136154,4,"2013-14","Heat"
+"2013-14
+Heat","univariate_fold_5.csv","RKHS",0.542610224385099,0.629747158791052,5,"2013-14","Heat"
+"2013-14
+Heat","univariate_fold_5.csv","Bayesian
+Lasso",0.488117534270258,0.643813159055015,5,"2013-14","Heat"
+"2013-14
+Severe Drought","H","GBLUP",0.38482740143884,0.289464958781082,1,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H","HBLUP",0.882254181558869,0.532567823419708,1,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H","GBLUP+H",0.92378225991578,0.630582033231879,1,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_2.csv","GBLUP",0.337499167305203,0.279708112967073,2,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_2.csv","HBLUP",0.841548396790153,0.434208371172353,2,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_2.csv","GBLUP+H",0.907733856548267,0.542487489891082,2,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_3.csv","GBLUP",0.471368086143287,0.579877165741448,3,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_3.csv","HBLUP",0.892829629011107,0.501738491367974,3,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_3.csv","GBLUP+H",0.929159926049338,0.663424009923265,3,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_4.csv","GBLUP",0.375384871869963,0.390676174700494,4,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_4.csv","HBLUP",0.815905202501222,0.540630572863404,4,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_4.csv","GBLUP+H",0.876614070376072,0.636562039632183,4,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_5.csv","GBLUP",0.460269192155609,0.299702392360725,5,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_5.csv","HBLUP",0.939439893488465,0.592090297700505,5,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","H_fold_5.csv","GBLUP+H",0.96830192551977,0.657374184961526,5,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM","MegaLMM
+GBLUP",1.07451332479792,0.772334129939639,1,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.890619368755867,0.696675910358888,2,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",1.09102888951022,0.874532373857725,3,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.802883599761446,0.784044411619149,4,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",1.1854072100954,0.777635194397365,5,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.516094461689414,0.27673838773674,1,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.411449321090098,0.253537399958376,2,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.64540495854199,0.49732690171324,3,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.417748332209327,0.384564009512702,4,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.631826613340597,0.309048933446253,5,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_RKHS","MegaLMM
+RKHS",1.29130763694066,0.839810739634062,1,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.11524805435641,0.75826231286701,2,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.31405933312213,0.864738743261969,3,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.986690804316283,0.837401678924689,4,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",1.41583339200281,0.87600541574421,5,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate","RKHS",0.589270242227207,0.394811408581675,1,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate","Bayesian
+Lasso",0.539531211162849,0.283528089893862,1,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate_fold_2.csv","RKHS",0.516447192497135,0.410800344380062,2,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate_fold_2.csv","Bayesian
+Lasso",0.423692273059935,0.262262088044244,2,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate_fold_3.csv","RKHS",0.72686443573773,0.596769266924663,3,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate_fold_3.csv","Bayesian
+Lasso",0.660112151986856,0.56230254078756,3,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate_fold_4.csv","RKHS",0.467368011067621,0.402857617519283,4,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate_fold_4.csv","Bayesian
+Lasso",0.440036161593269,0.380526661261378,4,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate_fold_5.csv","RKHS",0.711366914311214,0.396945477380796,5,"2013-14","Severe Drought"
+"2013-14
+Severe Drought","univariate_fold_5.csv","Bayesian
+Lasso",0.669296573511741,0.300420470531351,5,"2013-14","Severe Drought"
+"2013-14
+Optimal Flat","H","GBLUP",0.24885268027094,0.128568331310591,1,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H","HBLUP",0.0866110844564853,-0.0192719733861683,1,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H","GBLUP+H",0.210425684466774,0.222149845594154,1,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_2.csv","GBLUP",0.336634305778708,0.267508117824894,2,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_2.csv","HBLUP",-0.0650079182943666,0.0242777314831126,2,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_2.csv","GBLUP+H",0.123588015040244,0.311793358038792,2,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_3.csv","GBLUP",0.340205272363667,0.27354774540061,3,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_3.csv","HBLUP",0.0998338758741203,0.0958900680452587,3,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_3.csv","GBLUP+H",0.27256939736254,0.524537690599084,3,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_4.csv","GBLUP",0.30145139063893,0.402602817954346,4,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_4.csv","HBLUP",-0.0039480093227774,-0.1388261972491,4,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_4.csv","GBLUP+H",0.143361052510102,0.307357884417516,4,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_5.csv","GBLUP",0.344064190546193,0.314206931459775,5,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_5.csv","HBLUP",0.0435509537471702,0.105997974206626,5,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","H_fold_5.csv","GBLUP+H",0.230383615809712,0.396560548688585,5,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM","MegaLMM
+GBLUP",0.488240679984575,0.226416865215235,1,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.32088366420311,0.310945449774696,2,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.473696709679482,0.360551758215993,3,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.346546857396427,0.295955634258693,4,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.499743210031839,0.437321858667976,5,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.375026980497751,0.107153956036979,1,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.360885153769998,0.260317454895265,2,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.39359649663684,0.227137261147296,3,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.459331644181507,0.325630723443971,4,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.428488812179864,0.326872051280896,5,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_RKHS","MegaLMM
+RKHS",0.377736360561767,0.314695453383166,1,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.142734900235337,0.328257612395925,2,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.393572948044166,0.486716498781694,3,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.285816768760862,0.248216760250727,4,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.314001128491105,0.43696045426701,5,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate","RKHS",0.397006960011611,0.193898867080515,1,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate","Bayesian
+Lasso",0.392682276702249,0.127675227895866,1,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate_fold_2.csv","RKHS",0.315204823679654,0.326504218642097,2,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate_fold_2.csv","Bayesian
+Lasso",0.362495666147421,0.218725947533924,2,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate_fold_3.csv","RKHS",0.525533853578825,0.349731409691113,3,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate_fold_3.csv","Bayesian
+Lasso",0.471944270173505,0.282913128947826,3,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate_fold_4.csv","RKHS",0.455677850848403,0.406126145391199,4,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate_fold_4.csv","Bayesian
+Lasso",0.505988111263497,0.401556222884167,4,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate_fold_5.csv","RKHS",0.443857215474311,0.369644173455288,5,"2013-14","Optimal Flat"
+"2013-14
+Optimal Flat","univariate_fold_5.csv","Bayesian
+Lasso",0.439528860381147,0.306508053847268,5,"2013-14","Optimal Flat"
+"2014-15
+Moderate Drought","H","GBLUP",0.50191277416682,0.378146994656356,1,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H","HBLUP",0.694828965054178,0.491282427327454,1,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H","GBLUP+H",0.734209584859506,0.577883044494279,1,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_2.csv","GBLUP",0.451495207386908,0.614027526182452,2,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_2.csv","HBLUP",0.6108265228412,0.340892425857168,2,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_2.csv","GBLUP+H",0.665998789904677,0.510748429724397,2,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_3.csv","GBLUP",0.525587062871637,0.498711716021089,3,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_3.csv","HBLUP",0.668625108615856,0.391662491624043,3,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_3.csv","GBLUP+H",0.728693654586849,0.583831805341409,3,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_4.csv","GBLUP",0.51907292431045,0.451124259263129,4,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_4.csv","HBLUP",0.699454691571102,0.397988449483067,4,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_4.csv","GBLUP+H",0.748998276603401,0.548720959305125,4,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_5.csv","GBLUP",0.486949592813947,0.320289559047725,5,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_5.csv","HBLUP",0.691329506617319,0.461221700199221,5,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","H_fold_5.csv","GBLUP+H",0.740905452038459,0.552331723636147,5,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM","MegaLMM
+GBLUP",0.860678836831647,0.596770985520612,1,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.674399002810013,0.648201526487441,2,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.74218655661856,0.657168807884836,3,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.824192087716245,0.662495789132389,4,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.774318002256877,0.563175586729223,5,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.665864096148721,0.392947547356067,1,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.534478757224126,0.529533136112482,2,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.591267847532946,0.501638763929005,3,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.64369162807799,0.443454977126407,4,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.593459842485002,0.325558126797967,5,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_RKHS","MegaLMM
+RKHS",0.97736781576059,0.748538318285979,1,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.838843001392551,0.724643541712637,2,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.842090271476794,0.666385021769895,3,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.926439040993125,0.631485978499444,4,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.912510552431727,0.66659440501549,5,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate","RKHS",0.701135002145379,0.510585989728492,1,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate","Bayesian
+Lasso",0.67017943919622,0.385223693322674,1,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate_fold_2.csv","RKHS",0.561654594441053,0.571616097124446,2,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate_fold_2.csv","Bayesian
+Lasso",0.545494502977125,0.607994764793042,2,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate_fold_3.csv","RKHS",0.619219788028374,0.557092840525558,3,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate_fold_3.csv","Bayesian
+Lasso",0.58888237125338,0.536101968071817,3,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate_fold_4.csv","RKHS",0.646316119136153,0.515020278196311,4,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate_fold_4.csv","Bayesian
+Lasso",0.631963603463295,0.447845438440276,4,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate_fold_5.csv","RKHS",0.592429877223726,0.405983161031431,5,"2014-15","Moderate Drought"
+"2014-15
+Moderate Drought","univariate_fold_5.csv","Bayesian
+Lasso",0.592150457769783,0.321015166519798,5,"2014-15","Moderate Drought"
+"2014-15
+Optimal Bed","H","GBLUP",0.520987527024763,0.404121210423411,1,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H","HBLUP",0.888627748057244,0.622817147868667,1,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H","GBLUP+H",0.922057363455095,0.703974972936452,1,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_2.csv","GBLUP",0.467325668188709,0.469453019990731,2,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_2.csv","HBLUP",0.786533010176838,0.568807353116653,2,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_2.csv","GBLUP+H",0.806517825798806,0.668296141849526,2,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_3.csv","GBLUP",0.558238174321841,0.435309769177561,3,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_3.csv","HBLUP",0.88172880641191,0.545778711411788,3,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_3.csv","GBLUP+H",0.917658046015742,0.626958908711642,3,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_4.csv","GBLUP",0.608557027730161,0.595134220508389,4,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_4.csv","HBLUP",0.918323137162374,0.521761386556116,4,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_4.csv","GBLUP+H",0.949991566565703,0.603980894702496,4,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_5.csv","GBLUP",0.570446164078527,0.435720512379396,5,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_5.csv","HBLUP",0.82446181114113,0.552939419230561,5,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","H_fold_5.csv","GBLUP+H",0.866173642117303,0.644287629291645,5,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM","MegaLMM
+GBLUP",0.905173746531207,0.775376976059991,1,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.769318454764295,0.705703810972371,2,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.984716167230349,0.761961127518262,3,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.927512542707726,0.842797136376297,4,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.929371850471942,0.729140803487814,5,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.603356782781805,0.418131179853346,1,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.538126374474192,0.445287824866147,2,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.674013509164181,0.465492809230279,3,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.691088342055829,0.628865343216654,4,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.685185965906098,0.441660612300951,5,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_RKHS","MegaLMM
+RKHS",1.06879706943586,0.855720950048259,1,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.920534698967801,0.822705244282766,2,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.14862055421079,0.809258033844842,3,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.07242169186799,0.858829376731921,4,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",1.09161250972106,0.786431920284598,5,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate","RKHS",0.652160513189946,0.538276031587727,1,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate","Bayesian
+Lasso",0.607498084619456,0.39446925002245,1,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate_fold_2.csv","RKHS",0.574824219449281,0.536361846217658,2,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate_fold_2.csv","Bayesian
+Lasso",0.541375908762533,0.471840310149168,2,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate_fold_3.csv","RKHS",0.729345857088313,0.539329484263756,3,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate_fold_3.csv","Bayesian
+Lasso",0.685686549766741,0.448822168845112,3,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate_fold_4.csv","RKHS",0.701253655132585,0.731939561590296,4,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate_fold_4.csv","Bayesian
+Lasso",0.677000290406377,0.648480718046752,4,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate_fold_5.csv","RKHS",0.73275993784098,0.501750118646179,5,"2014-15","Optimal Bed"
+"2014-15
+Optimal Bed","univariate_fold_5.csv","Bayesian
+Lasso",0.694917893979513,0.446795666515267,5,"2014-15","Optimal Bed"
+"2014-15
+Heat","H","GBLUP",0.524130608207317,0.683732101457149,1,"2014-15","Heat"
+"2014-15
+Heat","H","HBLUP",0.704049010031649,0.380934073030796,1,"2014-15","Heat"
+"2014-15
+Heat","H","GBLUP+H",0.76406251062176,0.559850513294957,1,"2014-15","Heat"
+"2014-15
+Heat","H_fold_2.csv","GBLUP",0.367898158584637,0.436376903929601,2,"2014-15","Heat"
+"2014-15
+Heat","H_fold_2.csv","HBLUP",0.644605259329832,0.441609873266209,2,"2014-15","Heat"
+"2014-15
+Heat","H_fold_2.csv","GBLUP+H",0.667337968943331,0.57341799271081,2,"2014-15","Heat"
+"2014-15
+Heat","H_fold_3.csv","GBLUP",0.396570091662279,0.521056918678119,3,"2014-15","Heat"
+"2014-15
+Heat","H_fold_3.csv","HBLUP",0.623561224014162,0.312319859919362,3,"2014-15","Heat"
+"2014-15
+Heat","H_fold_3.csv","GBLUP+H",0.686883449799117,0.527145818556399,3,"2014-15","Heat"
+"2014-15
+Heat","H_fold_4.csv","GBLUP",0.438315553214209,0.37553953868234,4,"2014-15","Heat"
+"2014-15
+Heat","H_fold_4.csv","HBLUP",0.702114227374692,0.506225031883792,4,"2014-15","Heat"
+"2014-15
+Heat","H_fold_4.csv","GBLUP+H",0.759030321632668,0.628717525872913,4,"2014-15","Heat"
+"2014-15
+Heat","H_fold_5.csv","GBLUP",0.393807532990016,0.462594600454868,5,"2014-15","Heat"
+"2014-15
+Heat","H_fold_5.csv","HBLUP",0.672843960723977,0.326508161919001,5,"2014-15","Heat"
+"2014-15
+Heat","H_fold_5.csv","GBLUP+H",0.702403941329468,0.553415692119293,5,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM","MegaLMM
+GBLUP",0.968714632795703,0.795018476988543,1,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.632261285444792,0.611783397656853,2,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.69772411069146,0.760693655366915,3,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.826844878519141,0.647403025711351,4,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.632111142383515,0.639309366363625,5,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.763197236289453,0.610861639373942,1,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.479719682997427,0.428245421852467,2,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.507586636763491,0.550242543713635,3,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.558223686504863,0.361558272646315,4,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.466105678048545,0.509162066212308,5,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_RKHS","MegaLMM
+RKHS",1.1213872092479,0.727923294347039,1,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.870106267796408,0.6885280966126,2,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.874820009443779,0.715681211558849,3,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.971131287211035,0.779263382001122,4,"2014-15","Heat"
+"2014-15
+Heat","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.811329528380394,0.720977042077694,5,"2014-15","Heat"
+"2014-15
+Heat","univariate","RKHS",0.77577696300038,0.681758898466621,1,"2014-15","Heat"
+"2014-15
+Heat","univariate","Bayesian
+Lasso",0.767351441491218,0.628369603550977,1,"2014-15","Heat"
+"2014-15
+Heat","univariate_fold_2.csv","RKHS",0.517203306619328,0.472716858724697,2,"2014-15","Heat"
+"2014-15
+Heat","univariate_fold_2.csv","Bayesian
+Lasso",0.484216432284984,0.436644344398153,2,"2014-15","Heat"
+"2014-15
+Heat","univariate_fold_3.csv","RKHS",0.534590502497443,0.582676888898637,3,"2014-15","Heat"
+"2014-15
+Heat","univariate_fold_3.csv","Bayesian
+Lasso",0.49777547573404,0.545448201443354,3,"2014-15","Heat"
+"2014-15
+Heat","univariate_fold_4.csv","RKHS",0.606626802726807,0.430271433810375,4,"2014-15","Heat"
+"2014-15
+Heat","univariate_fold_4.csv","Bayesian
+Lasso",0.565913779556952,0.380252568088755,4,"2014-15","Heat"
+"2014-15
+Heat","univariate_fold_5.csv","RKHS",0.480726921803515,0.518926580332594,5,"2014-15","Heat"
+"2014-15
+Heat","univariate_fold_5.csv","Bayesian
+Lasso",0.472611524722794,0.472911328932669,5,"2014-15","Heat"
+"2014-15
+Severe Drought","H","GBLUP",0.214182229858962,0.322094647123651,1,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H","HBLUP",0.372437478995356,0.40443452706687,1,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H","GBLUP+H",0.40523528663662,0.474859976744811,1,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_2.csv","GBLUP",0.261071992367176,0.453131267955806,2,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_2.csv","HBLUP",0.40582035056863,0.300983956629075,2,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_2.csv","GBLUP+H",0.448664162517516,0.519161109201004,2,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_3.csv","GBLUP",0.253289032135573,0.38322932457405,3,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_3.csv","HBLUP",0.388820848258975,0.34297759413384,3,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_3.csv","GBLUP+H",0.411829721055388,0.494179603597929,3,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_4.csv","GBLUP",0.208720603826299,0.221435225067481,4,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_4.csv","HBLUP",0.396383644436193,0.280522054949066,4,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_4.csv","GBLUP+H",0.400334249565917,0.372260883973511,4,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_5.csv","GBLUP",0.279843937915484,0.351044164247558,5,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_5.csv","HBLUP",0.431617546366077,0.422053624881046,5,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","H_fold_5.csv","GBLUP+H",0.472053454030785,0.5234634932401,5,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM","MegaLMM
+GBLUP",0.444022391868642,0.569709029297187,1,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.525526663535193,0.645713270005247,2,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.463075441752215,0.551942143961679,3,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.453914088240016,0.417769021023774,4,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.623755887481049,0.504306876677227,5,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.29848083107349,0.341031675319891,1,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.342432660716444,0.436723991644619,2,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.352064248869264,0.395951981298357,3,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.310242876489792,0.23933302216092,4,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.472826531164037,0.413006696944427,5,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_RKHS","MegaLMM
+RKHS",0.513406877269832,0.565677099982823,1,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.644175553288995,0.65946614375593,2,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.570172016706963,0.475572907747048,3,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.580374265970646,0.484865797780382,4,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.775505731082689,0.584337273790081,5,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate","RKHS",0.346964849870835,0.448273673165702,1,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate","Bayesian
+Lasso",0.290832670797627,0.300224581486518,1,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate_fold_2.csv","RKHS",0.436387537593283,0.495984065046288,2,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate_fold_2.csv","Bayesian
+Lasso",0.36968668042613,0.509916058804635,2,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate_fold_3.csv","RKHS",0.395721798068021,0.453964871651771,3,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate_fold_3.csv","Bayesian
+Lasso",0.357095805759123,0.41718547745109,3,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate_fold_4.csv","RKHS",0.334407589517312,0.294688578057987,4,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate_fold_4.csv","Bayesian
+Lasso",0.295024200064794,0.220490310258607,4,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate_fold_5.csv","RKHS",0.486297286029903,0.392842443244222,5,"2014-15","Severe Drought"
+"2014-15
+Severe Drought","univariate_fold_5.csv","Bayesian
+Lasso",0.448434909884918,0.344379473597145,5,"2014-15","Severe Drought"
+"2014-15
+Optimal Flat","H","GBLUP",0.434789242296774,0.559811929839806,1,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H","HBLUP",0.706147880531958,0.56569559065225,1,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H","GBLUP+H",0.722270289008996,0.616096236547612,1,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_2.csv","GBLUP",0.451075241502505,0.442689765136446,2,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_2.csv","HBLUP",0.718951581053556,0.513235956148033,2,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_2.csv","GBLUP+H",0.745176299315996,0.599844406752533,2,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_3.csv","GBLUP",0.423108125251681,0.426895314756292,3,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_3.csv","HBLUP",0.730144078302351,0.552074577855007,3,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_3.csv","GBLUP+H",0.737037573423143,0.571643274878135,3,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_4.csv","GBLUP",0.572718646819886,0.583508549169297,4,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_4.csv","HBLUP",0.804851569380236,0.490339133324596,4,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_4.csv","GBLUP+H",0.829897900795111,0.551272087778639,4,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_5.csv","GBLUP",0.443576377499,0.503627756337079,5,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_5.csv","HBLUP",0.683118662889595,0.592573738416951,5,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","H_fold_5.csv","GBLUP+H",0.705052281074458,0.657945749455155,5,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM","MegaLMM
+GBLUP",0.776356110375885,0.795727872753962,1,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.844317197049011,0.750732361571822,2,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.832765604486571,0.742381212842566,3,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.91108213378849,0.795808142567296,4,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.765888347824077,0.646840060163393,5,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.495121874948179,0.493671620538078,1,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_10.csv","MegaLMM
+GBLUP CV1",0.614101906706456,0.478136778322757,10,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_11.csv","MegaLMM
+GBLUP CV1",0.672333534016114,0.360405917138992,11,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_12.csv","MegaLMM
+GBLUP CV1",0.55518239452129,0.549326727290715,12,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_13.csv","MegaLMM
+GBLUP CV1",0.595318121165478,0.565099273197914,13,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_14.csv","MegaLMM
+GBLUP CV1",0.551078329158364,0.489258499490952,14,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_15.csv","MegaLMM
+GBLUP CV1",0.592568728545358,0.477439841946173,15,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_16.csv","MegaLMM
+GBLUP CV1",0.566099223891344,0.394061096829036,16,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_17.csv","MegaLMM
+GBLUP CV1",0.58058508741915,0.485354780820893,17,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_18.csv","MegaLMM
+GBLUP CV1",0.570362208385777,0.395585068573098,18,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_19.csv","MegaLMM
+GBLUP CV1",0.708029328408954,0.671644867691961,19,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.563467349980841,0.422815353870347,2,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_20.csv","MegaLMM
+GBLUP CV1",0.6149661326163,0.484815526038297,20,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.536110078161891,0.439330887699186,3,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.677330888725705,0.615745497137088,4,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.578975707152476,0.501522269502219,5,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_6.csv","MegaLMM
+GBLUP CV1",0.536485217628713,0.302655582464728,6,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_7.csv","MegaLMM
+GBLUP CV1",0.55198106628885,0.39267530782795,7,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_8.csv","MegaLMM
+GBLUP CV1",0.682119197074963,0.610570769519857,8,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_no2nd_fold_9.csv","MegaLMM
+GBLUP CV1",0.57852783867278,0.570093362791603,9,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_RKHS","MegaLMM
+RKHS",0.880574702895478,0.817998215022402,1,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.983973557349084,0.761394239318028,2,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.922458903705466,0.798519825944352,3,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.02280571133747,0.812152329254902,4,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.936728836071991,0.844826750754862,5,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate","RKHS",0.54090504081732,0.581478751755794,1,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate","Bayesian
+Lasso",0.514639616922795,0.523791514976032,1,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate_fold_2.csv","RKHS",0.6074817994175,0.463141969409844,2,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate_fold_2.csv","Bayesian
+Lasso",0.569586789292371,0.436470868212466,2,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate_fold_3.csv","RKHS",0.584537905798724,0.482444011687615,3,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate_fold_3.csv","Bayesian
+Lasso",0.53701559608046,0.408325861852163,3,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate_fold_4.csv","RKHS",0.650672197103843,0.63643885198729,4,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate_fold_4.csv","Bayesian
+Lasso",0.652321359716505,0.618388882912219,4,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate_fold_5.csv","RKHS",0.63367617441328,0.612682774156648,5,"2014-15","Optimal Flat"
+"2014-15
+Optimal Flat","univariate_fold_5.csv","Bayesian
+Lasso",0.591251900035691,0.545655065115473,5,"2014-15","Optimal Flat"
+"2015-16
+Moderate Drought","H","GBLUP",0.312658369208847,0.33878799565167,1,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H","HBLUP",0.655618678258525,0.473023854171082,1,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H","GBLUP+H",0.692519457826242,0.524957043298688,1,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_2.csv","GBLUP",0.336346260116764,0.312121187857392,2,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_2.csv","HBLUP",0.739305166311418,0.48934409029386,2,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_2.csv","GBLUP+H",0.781852076068705,0.556473356718894,2,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_3.csv","GBLUP",0.382114318610558,0.441618124088284,3,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_3.csv","HBLUP",0.73246033120703,0.379508166044937,3,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_3.csv","GBLUP+H",0.76865432540104,0.480995383421327,3,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_4.csv","GBLUP",0.335543153836556,0.464619551124525,4,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_4.csv","HBLUP",0.71295327983276,0.533022053313039,4,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_4.csv","GBLUP+H",0.733184817671728,0.589828040722898,4,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_5.csv","GBLUP",0.391002233686184,0.647390118717924,5,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_5.csv","HBLUP",0.718833615200418,0.545479050443779,5,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","H_fold_5.csv","GBLUP+H",0.75580897455033,0.675871128546548,5,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM","MegaLMM
+GBLUP",0.676832395636465,0.674366804028502,1,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.847181308122566,0.6906567425153,2,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.766327800371389,0.663932696987357,3,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.804277130769768,0.76034979288533,4,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.774662374551917,0.837155819335668,5,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.397340662953443,0.332481498856365,1,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.475169792125178,0.336163958940622,2,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.509824061130373,0.43170470583847,3,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.453889370857498,0.472572350326853,4,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.47720941927319,0.637629512537098,5,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_RKHS","MegaLMM
+RKHS",0.883166679624794,0.731368459923854,1,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.02012139665693,0.690086204682678,2,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.993715905713185,0.692624547204563,3,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.96816072779003,0.695586809362283,4,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.911671051493493,0.869057027258086,5,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate","RKHS",0.472233438369757,0.350103748829892,1,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate","Bayesian
+Lasso",0.396068498967028,0.339752459763712,1,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate_fold_2.csv","RKHS",0.483197719776039,0.33021166390304,2,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate_fold_2.csv","Bayesian
+Lasso",0.458031755051541,0.309926185610491,2,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate_fold_3.csv","RKHS",0.575294264154742,0.423681113744073,3,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate_fold_3.csv","Bayesian
+Lasso",0.511305622630993,0.452277929776205,3,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate_fold_4.csv","RKHS",0.52825209784509,0.488757388937669,4,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate_fold_4.csv","Bayesian
+Lasso",0.450054719675661,0.419241294741499,4,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate_fold_5.csv","RKHS",0.550067563709931,0.68466870539107,5,"2015-16","Moderate Drought"
+"2015-16
+Moderate Drought","univariate_fold_5.csv","Bayesian
+Lasso",0.48100967537456,0.601109634867451,5,"2015-16","Moderate Drought"
+"2015-16
+Optimal Bed","H","GBLUP",0.393418222813001,0.507067775184398,1,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H","HBLUP",0.504301380018935,0.114771553700221,1,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H","GBLUP+H",0.647779342455212,0.51931912435296,1,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_2.csv","GBLUP",0.377334707157799,0.309594762497111,2,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_2.csv","HBLUP",0.50115683882159,0.207071355168097,2,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_2.csv","GBLUP+H",0.672052909919476,0.427191432416177,2,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_3.csv","GBLUP",0.344648355439836,0.296886727669218,3,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_3.csv","HBLUP",0.550349808215578,0.0812321209705305,3,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_3.csv","GBLUP+H",0.682150908495907,0.273139313471246,3,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_4.csv","GBLUP",0.437272262324906,0.304278803242122,4,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_4.csv","HBLUP",0.579586969040945,0.275777679182017,4,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_4.csv","GBLUP+H",0.750097147198892,0.491942774477471,4,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_5.csv","GBLUP",0.514214836805411,0.511639448392094,5,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_5.csv","HBLUP",0.578903301951173,0.276131194771901,5,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","H_fold_5.csv","GBLUP+H",0.781957593751588,0.636801637327817,5,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM","MegaLMM
+GBLUP",0.575577904420163,0.644508029540343,1,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.588122450970227,0.484151810130854,2,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.488433099936926,0.454003761653281,3,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.574091972352525,0.472916104434505,4,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.711316990821153,0.608887156847521,5,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.440818814448715,0.512520017690972,1,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.428067394363658,0.34829712626944,2,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.313644483924773,0.279440756356117,3,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.416732855918356,0.314366347307637,4,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.555734287790345,0.499386254346853,5,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_RKHS","MegaLMM
+RKHS",0.735632828865954,0.553927108358018,1,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.736983399296077,0.473123273550373,2,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.622319824111775,0.460413814127492,3,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.73380465805529,0.523513117760681,4,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.858954738588529,0.681724161598864,5,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate","RKHS",0.475097104220625,0.498439445508395,1,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate","Bayesian
+Lasso",0.43910896136557,0.490570058484474,1,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate_fold_2.csv","RKHS",0.468961489798439,0.339846771031989,2,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate_fold_2.csv","Bayesian
+Lasso",0.387861687440146,0.291818909138624,2,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate_fold_3.csv","RKHS",0.365156984899347,0.339580454557151,3,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate_fold_3.csv","Bayesian
+Lasso",0.329753604070941,0.301555125235597,3,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate_fold_4.csv","RKHS",0.47008625199504,0.341606599514531,4,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate_fold_4.csv","Bayesian
+Lasso",0.405702885006661,0.285548880811633,4,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate_fold_5.csv","RKHS",0.644810494474074,0.541588947907744,5,"2015-16","Optimal Bed"
+"2015-16
+Optimal Bed","univariate_fold_5.csv","Bayesian
+Lasso",0.542484692199749,0.499885674848096,5,"2015-16","Optimal Bed"
+"2015-16
+Heat","H","GBLUP",0.506875679065115,0.636497354345061,1,"2015-16","Heat"
+"2015-16
+Heat","H","HBLUP",0.81335576992129,0.455540366802448,1,"2015-16","Heat"
+"2015-16
+Heat","H","GBLUP+H",0.861143167922678,0.691906454470626,1,"2015-16","Heat"
+"2015-16
+Heat","H_fold_2.csv","GBLUP",0.492106127160488,0.401863285935893,2,"2015-16","Heat"
+"2015-16
+Heat","H_fold_2.csv","HBLUP",0.828742525934376,0.653859050105959,2,"2015-16","Heat"
+"2015-16
+Heat","H_fold_2.csv","GBLUP+H",0.889131213559316,0.746771574290067,2,"2015-16","Heat"
+"2015-16
+Heat","H_fold_3.csv","GBLUP",0.503940412126545,0.426280484626863,3,"2015-16","Heat"
+"2015-16
+Heat","H_fold_3.csv","HBLUP",0.830973772549092,0.56950808772476,3,"2015-16","Heat"
+"2015-16
+Heat","H_fold_3.csv","GBLUP+H",0.877167584415281,0.694092631178575,3,"2015-16","Heat"
+"2015-16
+Heat","H_fold_4.csv","GBLUP",0.499065009881225,0.625589584711711,4,"2015-16","Heat"
+"2015-16
+Heat","H_fold_4.csv","HBLUP",0.841427064258105,0.565462274886392,4,"2015-16","Heat"
+"2015-16
+Heat","H_fold_4.csv","GBLUP+H",0.882330874183074,0.699684450126193,4,"2015-16","Heat"
+"2015-16
+Heat","H_fold_5.csv","GBLUP",0.502433344983002,0.639764867272057,5,"2015-16","Heat"
+"2015-16
+Heat","H_fold_5.csv","HBLUP",0.860073723634538,0.713643780232454,5,"2015-16","Heat"
+"2015-16
+Heat","H_fold_5.csv","GBLUP+H",0.905749044766144,0.836132098161117,5,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM","MegaLMM
+GBLUP",0.838876328957347,0.783149853367755,1,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.820058500248177,0.756253428583257,2,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.872743138294068,0.766420269732475,3,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.786980236760375,0.77204687719394,4,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.783498877100315,0.827390268860951,5,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.624974072177085,0.612078679659004,1,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.552095572352358,0.417193784359423,2,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.585654645316991,0.410398360580726,3,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.564736204538706,0.579452317210225,4,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.543221419685938,0.561446084355306,5,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_RKHS","MegaLMM
+RKHS",1.03148906854558,0.833144650578582,1,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",0.972140857893753,0.889731865781684,2,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.01324509125819,0.839705515747276,3,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.01583436742728,0.921823566145192,4,"2015-16","Heat"
+"2015-16
+Heat","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.949581091678085,0.925245587574485,5,"2015-16","Heat"
+"2015-16
+Heat","univariate","RKHS",0.640261266864139,0.660782656404917,1,"2015-16","Heat"
+"2015-16
+Heat","univariate","Bayesian
+Lasso",0.615376051819729,0.599383695132908,1,"2015-16","Heat"
+"2015-16
+Heat","univariate_fold_2.csv","RKHS",0.573581208894155,0.447863600298191,2,"2015-16","Heat"
+"2015-16
+Heat","univariate_fold_2.csv","Bayesian
+Lasso",0.550110406704984,0.407469182872031,2,"2015-16","Heat"
+"2015-16
+Heat","univariate_fold_3.csv","RKHS",0.613070779523968,0.471819929895621,3,"2015-16","Heat"
+"2015-16
+Heat","univariate_fold_3.csv","Bayesian
+Lasso",0.590238716465539,0.433234866955395,3,"2015-16","Heat"
+"2015-16
+Heat","univariate_fold_4.csv","RKHS",0.60631185102448,0.67510859939935,4,"2015-16","Heat"
+"2015-16
+Heat","univariate_fold_4.csv","Bayesian
+Lasso",0.575194352807557,0.601301427806834,4,"2015-16","Heat"
+"2015-16
+Heat","univariate_fold_5.csv","RKHS",0.568234507534761,0.65812785492973,5,"2015-16","Heat"
+"2015-16
+Heat","univariate_fold_5.csv","Bayesian
+Lasso",0.539213536692828,0.668972818894384,5,"2015-16","Heat"
+"2015-16
+Severe Drought","H","GBLUP",0.437452334835826,0.433647393209173,1,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H","HBLUP",0.84732540256695,0.524068916366136,1,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H","GBLUP+H",0.875262803532614,0.576084167935949,1,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_2.csv","GBLUP",0.478696784264906,0.464014013439214,2,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_2.csv","HBLUP",0.852997198041553,0.613741428683646,2,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_2.csv","GBLUP+H",0.871783604713692,0.702019043393708,2,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_3.csv","GBLUP",0.460439467805934,0.535558677390402,3,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_3.csv","HBLUP",0.860534989556622,0.459842941859042,3,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_3.csv","GBLUP+H",0.894617563588566,0.550272471704615,3,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_4.csv","GBLUP",0.437419229949698,0.455352634944142,4,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_4.csv","HBLUP",0.862395343935932,0.665069712522984,4,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_4.csv","GBLUP+H",0.88815249457263,0.732569229762775,4,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_5.csv","GBLUP",0.40044267338457,0.357752545115447,5,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_5.csv","HBLUP",0.83522490287761,0.606035702266113,5,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","H_fold_5.csv","GBLUP+H",0.858323543318027,0.664287081129097,5,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM","MegaLMM
+GBLUP",0.932552109858944,0.794720228212242,1,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.984852754105321,0.792318353221562,2,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.903925979150189,0.821189319684764,3,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.929809517556872,0.839823709506488,4,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.865974788116608,0.763170138392175,5,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.559521923821816,0.407142473852486,1,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.666664368031917,0.471521859881324,2,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.568112697325867,0.547223909482778,3,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.553010464369679,0.44037158680872,4,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.494437443926174,0.336305057426503,5,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_RKHS","MegaLMM
+RKHS",1.14476778259584,0.843535932768154,1,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.18871730715759,0.906798347280864,2,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.09526674311567,0.790435418369133,3,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.11597161008494,0.867213361972895,4,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",1.07654806822489,0.873474953058427,5,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate","RKHS",0.636265841333526,0.506028622100241,1,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate","Bayesian
+Lasso",0.586164894559944,0.448681275181757,1,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate_fold_2.csv","RKHS",0.710246583015282,0.553592450516242,2,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate_fold_2.csv","Bayesian
+Lasso",0.662676455756347,0.463482105677844,2,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate_fold_3.csv","RKHS",0.598120280528015,0.544428376747211,3,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate_fold_3.csv","Bayesian
+Lasso",0.5757196422826,0.552587933314358,3,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate_fold_4.csv","RKHS",0.593857752326035,0.523359011240693,4,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate_fold_4.csv","Bayesian
+Lasso",0.559417397955192,0.45080499602043,4,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate_fold_5.csv","RKHS",0.555894640222943,0.442243652942974,5,"2015-16","Severe Drought"
+"2015-16
+Severe Drought","univariate_fold_5.csv","Bayesian
+Lasso",0.511753301440171,0.355438313499331,5,"2015-16","Severe Drought"
+"2015-16
+Optimal Flat","H","GBLUP",0.390346495601813,0.379956462617068,1,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H","HBLUP",0.711055307653321,0.451380079231889,1,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H","GBLUP+H",0.750465008698544,0.614729329951896,1,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_2.csv","GBLUP",0.412668706335609,0.400761267025664,2,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_2.csv","HBLUP",0.714167901492576,0.417028792106569,2,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_2.csv","GBLUP+H",0.726955375280688,0.495495452705293,2,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_3.csv","GBLUP",0.312581235523573,0.276065973276307,3,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_3.csv","HBLUP",0.597447900754036,0.313436408338942,3,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_3.csv","GBLUP+H",0.625411359416948,0.382013601804476,3,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_4.csv","GBLUP",0.433615620629072,0.351966712038298,4,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_4.csv","HBLUP",0.738693224620441,0.472782671709048,4,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_4.csv","GBLUP+H",0.783522593223213,0.599522411620674,4,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_5.csv","GBLUP",0.344666803900457,0.332270383368565,5,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_5.csv","HBLUP",0.59845426798375,0.469038640547996,5,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","H_fold_5.csv","GBLUP+H",0.636547629231746,0.57844350133665,5,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM","MegaLMM
+GBLUP",0.87678969589591,0.716398927181568,1,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.815524217022956,0.606749940329761,2,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.711385058012355,0.564196211636004,3,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.816889803350504,0.603350255035131,4,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.778071798136184,0.637940264842967,5,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.54924832158279,0.395341963815598,1,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.557487973207058,0.375310702889541,2,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.411146273054208,0.251801439227404,3,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.550952321976208,0.344920558858846,4,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.500954611662775,0.334568533148086,5,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_RKHS","MegaLMM
+RKHS",1.10311285386666,0.700310935837005,1,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.06559779016896,0.570629745384638,2,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",0.882154043472172,0.505259818237853,3,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.00092332409992,0.62466432745088,4,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",0.952297984617597,0.726332924471682,5,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate","RKHS",0.642862773612559,0.416115245976826,1,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate","Bayesian
+Lasso",0.549013480955394,0.389624216740406,1,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate_fold_2.csv","RKHS",0.645477466837012,0.460730647096858,2,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate_fold_2.csv","Bayesian
+Lasso",0.580602858084386,0.404133231989507,2,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate_fold_3.csv","RKHS",0.486902536306307,0.29428325665461,3,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate_fold_3.csv","Bayesian
+Lasso",0.422399502681927,0.281604104288393,3,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate_fold_4.csv","RKHS",0.629745144253526,0.392438307045217,4,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate_fold_4.csv","Bayesian
+Lasso",0.560552054368471,0.342291246784291,4,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate_fold_5.csv","RKHS",0.563904404082587,0.425827836409445,5,"2015-16","Optimal Flat"
+"2015-16
+Optimal Flat","univariate_fold_5.csv","Bayesian
+Lasso",0.502896011473697,0.337808405098721,5,"2015-16","Optimal Flat"
+"2016-17
+Moderate Drought","H","GBLUP",0.626837858020233,0.491129083527692,1,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H","HBLUP",0.855248780643667,0.671799392815258,1,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H","GBLUP+H",0.907907947008955,0.832253556410723,1,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_2.csv","GBLUP",0.650165272817416,0.449704225235389,2,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_2.csv","HBLUP",0.877063950550877,0.64817209576656,2,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_2.csv","GBLUP+H",0.922368988555565,0.759986849437541,2,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_3.csv","GBLUP",0.629769025161082,0.609342825642327,3,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_3.csv","HBLUP",0.828555937657952,0.595892680802955,3,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_3.csv","GBLUP+H",0.893952584502117,0.738110980131733,3,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_4.csv","GBLUP",0.589236629677999,0.544194138835387,4,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_4.csv","HBLUP",0.812510473707962,0.56539140210789,4,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_4.csv","GBLUP+H",0.863362499095124,0.716972872372005,4,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_5.csv","GBLUP",0.684289123197369,0.503332093858951,5,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_5.csv","HBLUP",0.885343887570615,0.638472271772193,5,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","H_fold_5.csv","GBLUP+H",0.955024015555037,0.792581968445415,5,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM","MegaLMM
+GBLUP",1.00172229603927,0.789113967319898,1,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.934083787681712,0.76988082148289,2,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",0.990786417603189,0.83816636628838,3,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.886898137799898,0.844383714312478,4,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",1.0260378743273,0.795524564623226,5,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.744439333504591,0.482257978876495,1,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.737144779308009,0.455656688322757,2,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.772839379327232,0.64310127870342,3,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.659400566938978,0.561665153411862,4,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.800312793798915,0.481495590385961,5,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_RKHS","MegaLMM
+RKHS",1.12011851793119,0.869249561927022,1,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.0541515628311,0.863717680434691,2,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.10471645205293,0.857174874129659,3,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",0.971960547845506,0.884085688752527,4,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",1.15258960863718,0.879474399592367,5,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate","RKHS",0.791073597834685,0.513634946836824,1,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate","Bayesian
+Lasso",0.764363969489839,0.481559429619967,1,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate_fold_2.csv","RKHS",0.777589434642324,0.49463106644136,2,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate_fold_2.csv","Bayesian
+Lasso",0.7343188727768,0.453745630440004,2,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate_fold_3.csv","RKHS",0.814066527426594,0.643241491190475,3,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate_fold_3.csv","Bayesian
+Lasso",0.774395951837685,0.590391086489533,3,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate_fold_4.csv","RKHS",0.687859597285388,0.587345918830528,4,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate_fold_4.csv","Bayesian
+Lasso",0.654444200321782,0.569378730677287,4,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate_fold_5.csv","RKHS",0.844006536707343,0.563087987704878,5,"2016-17","Moderate Drought"
+"2016-17
+Moderate Drought","univariate_fold_5.csv","Bayesian
+Lasso",0.811494391171758,0.489445348026955,5,"2016-17","Moderate Drought"
+"2016-17
+Optimal Bed","H","GBLUP",0.555084842906613,0.480162472593218,1,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H","HBLUP",0.868792681324537,0.746838747194735,1,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H","GBLUP+H",0.894329982823575,0.83156725977985,1,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_2.csv","GBLUP",0.513458048213055,0.540013074875152,2,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_2.csv","HBLUP",0.840420151866322,0.614877947162559,2,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_2.csv","GBLUP+H",0.862145903107952,0.671850824755456,2,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_3.csv","GBLUP",0.530689213951402,0.440849669885917,3,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_3.csv","HBLUP",0.864802060987312,0.672705554189199,3,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_3.csv","GBLUP+H",0.891855418640782,0.737273256990028,3,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_4.csv","GBLUP",0.528513466007941,0.578809319417583,4,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_4.csv","HBLUP",0.866462742037226,0.621781183047009,4,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_4.csv","GBLUP+H",0.894916886930251,0.715963865426442,4,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_5.csv","GBLUP",0.540014204386827,0.627124736431588,5,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_5.csv","HBLUP",0.844621647963778,0.637238775575266,5,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","H_fold_5.csv","GBLUP+H",0.869962890030617,0.709514713014642,5,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM","MegaLMM
+GBLUP",1.05019652154389,0.875688459399484,1,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",1.02661767289138,0.856026089517938,2,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",1.0440366450609,0.77928600167217,3,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",1.02960051102004,0.864646073362126,4,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",1.11889507706285,0.893822827566873,5,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.731561755503525,0.523164136705925,1,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.691271420782119,0.568315581292675,2,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.726514949436038,0.47899871740449,3,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.71238498469739,0.652773441825539,4,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.74519978372741,0.652827976313989,5,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_RKHS","MegaLMM
+RKHS",1.20415232666575,0.937647680310507,1,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.14350036767263,0.820682851959913,2,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.21019303794291,0.874066594641569,3,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.18244052186991,0.828397388458233,4,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",1.22126575325764,0.855166348228015,5,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate","RKHS",0.826368849080634,0.617863163354891,1,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate","Bayesian
+Lasso",0.743163906067777,0.505490080486202,1,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate_fold_2.csv","RKHS",0.751068149879734,0.664086985893532,2,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate_fold_2.csv","Bayesian
+Lasso",0.683346295716547,0.565715910680364,2,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate_fold_3.csv","RKHS",0.776531154036918,0.545284199719994,3,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate_fold_3.csv","Bayesian
+Lasso",0.725232307986744,0.426924163716587,3,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate_fold_4.csv","RKHS",0.742964609650082,0.654938658118613,4,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate_fold_4.csv","Bayesian
+Lasso",0.699681161721778,0.578051431540711,4,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate_fold_5.csv","RKHS",0.807221638715338,0.680253606195381,5,"2016-17","Optimal Bed"
+"2016-17
+Optimal Bed","univariate_fold_5.csv","Bayesian
+Lasso",0.760366358482972,0.608814230053416,5,"2016-17","Optimal Bed"
+"2016-17
+Heat","H","GBLUP",0.432848421075693,0.57439948024935,1,"2016-17","Heat"
+"2016-17
+Heat","H","HBLUP",0.77982830960555,0.453128157321354,1,"2016-17","Heat"
+"2016-17
+Heat","H","GBLUP+H",0.801753673936767,0.576747590839661,1,"2016-17","Heat"
+"2016-17
+Heat","H_fold_2.csv","GBLUP",0.424360527053284,0.558224794469174,2,"2016-17","Heat"
+"2016-17
+Heat","H_fold_2.csv","HBLUP",0.749989201826589,0.517454819408528,2,"2016-17","Heat"
+"2016-17
+Heat","H_fold_2.csv","GBLUP+H",0.781502443262591,0.67286517032473,2,"2016-17","Heat"
+"2016-17
+Heat","H_fold_3.csv","GBLUP",0.423172248732851,0.374255696108281,3,"2016-17","Heat"
+"2016-17
+Heat","H_fold_3.csv","HBLUP",0.805754799508559,0.557123566483105,3,"2016-17","Heat"
+"2016-17
+Heat","H_fold_3.csv","GBLUP+H",0.834914136153008,0.639056436103561,3,"2016-17","Heat"
+"2016-17
+Heat","H_fold_4.csv","GBLUP",0.374961689383227,0.353290837808047,4,"2016-17","Heat"
+"2016-17
+Heat","H_fold_4.csv","HBLUP",0.777102252231992,0.570181650069255,4,"2016-17","Heat"
+"2016-17
+Heat","H_fold_4.csv","GBLUP+H",0.803247792910934,0.675699259163332,4,"2016-17","Heat"
+"2016-17
+Heat","H_fold_5.csv","GBLUP",0.448743406432562,0.492294988527342,5,"2016-17","Heat"
+"2016-17
+Heat","H_fold_5.csv","HBLUP",0.789874417828159,0.469529609109462,5,"2016-17","Heat"
+"2016-17
+Heat","H_fold_5.csv","GBLUP+H",0.812282567416988,0.588603413050834,5,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM","MegaLMM
+GBLUP",0.882914718565694,0.774423086342321,1,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.870348121034157,0.747564301842656,2,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",1.15056586288943,0.829814921691041,3,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.847675703311245,0.688071387858329,4,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.869716008940887,0.79560939909052,5,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.583548375073804,0.514716028996691,1,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.606725451715464,0.509823231667904,2,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.682872203371733,0.35828624731672,3,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.523924930421473,0.327154359681524,4,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.605977195454489,0.480769370874284,5,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_RKHS","MegaLMM
+RKHS",1.12734766474473,0.677444245639115,1,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.12668875301056,0.747781661286486,2,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.35787605842712,0.737297459136071,3,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.15347202054676,0.796331727907804,4,"2016-17","Heat"
+"2016-17
+Heat","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",1.07925255334548,0.710705816767517,5,"2016-17","Heat"
+"2016-17
+Heat","univariate","RKHS",0.697361616539304,0.648760653622296,1,"2016-17","Heat"
+"2016-17
+Heat","univariate","Bayesian
+Lasso",0.614758768437162,0.584789948798654,1,"2016-17","Heat"
+"2016-17
+Heat","univariate_fold_2.csv","RKHS",0.703619553467945,0.631007280065715,2,"2016-17","Heat"
+"2016-17
+Heat","univariate_fold_2.csv","Bayesian
+Lasso",0.621697151936921,0.569675579098143,2,"2016-17","Heat"
+"2016-17
+Heat","univariate_fold_3.csv","RKHS",0.819423092373454,0.48072439643641,3,"2016-17","Heat"
+"2016-17
+Heat","univariate_fold_3.csv","Bayesian
+Lasso",0.694407605138971,0.366382014083662,3,"2016-17","Heat"
+"2016-17
+Heat","univariate_fold_4.csv","RKHS",0.638156516296629,0.494107600666318,4,"2016-17","Heat"
+"2016-17
+Heat","univariate_fold_4.csv","Bayesian
+Lasso",0.538021437392903,0.354146027528049,4,"2016-17","Heat"
+"2016-17
+Heat","univariate_fold_5.csv","RKHS",0.698190359067908,0.603907157108566,5,"2016-17","Heat"
+"2016-17
+Heat","univariate_fold_5.csv","Bayesian
+Lasso",0.604690531668367,0.521230006573459,5,"2016-17","Heat"
+"2016-17
+Severe Drought","H","GBLUP",0.426904434485113,0.504287733314726,1,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H","HBLUP",0.805013164909805,0.703189062495176,1,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H","GBLUP+H",0.831635213369344,0.770105097303295,1,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_2.csv","GBLUP",0.418903221577254,0.454932434705888,2,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_2.csv","HBLUP",0.778637582243929,0.624860020445519,2,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_2.csv","GBLUP+H",0.808155909840243,0.688947692620813,2,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_3.csv","GBLUP",0.425584822861171,0.596464186693822,3,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_3.csv","HBLUP",0.774688133381935,0.440437699973754,3,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_3.csv","GBLUP+H",0.798012892853388,0.541755479546835,3,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_4.csv","GBLUP",0.369977480998859,0.466819032603064,4,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_4.csv","HBLUP",0.780658254730131,0.626189842022467,4,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_4.csv","GBLUP+H",0.807978156737294,0.731113415510307,4,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_5.csv","GBLUP",0.343036356524285,0.327336997797646,5,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_5.csv","HBLUP",0.795827232016385,0.632034451344425,5,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","H_fold_5.csv","GBLUP+H",0.812557570990272,0.683435924579135,5,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM","MegaLMM
+GBLUP",1.07976652772964,0.898060576037322,1,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",1.06389100913812,0.883924618297464,2,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",1.06583652212299,0.872206253450924,3,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",0.990675330772002,0.87894920967476,4,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.841904841760103,0.726758734134571,5,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.616742573620996,0.490042039360955,1,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.622582176826501,0.473512213122606,2,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.633169434009893,0.638755845237768,3,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.539577927978519,0.482704469885272,4,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.459705669884696,0.324021479420883,5,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_RKHS","MegaLMM
+RKHS",1.18301554522551,0.86726783344989,1,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.21298497928436,0.856217511315595,2,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.21558788170948,0.781924543770699,3,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.15996560012496,0.902832354673736,4,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",1.05763473790926,0.758608655226017,5,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate","RKHS",0.652578005919445,0.576456937731066,1,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate","Bayesian
+Lasso",0.622987781538348,0.509221852798255,1,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate_fold_2.csv","RKHS",0.634745816019784,0.551666972834609,2,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate_fold_2.csv","Bayesian
+Lasso",0.634564773101298,0.471804955505694,2,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate_fold_3.csv","RKHS",0.693257791569668,0.637212347120584,3,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate_fold_3.csv","Bayesian
+Lasso",0.651653584556285,0.575419937849011,3,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate_fold_4.csv","RKHS",0.570744287840998,0.516279699885583,4,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate_fold_4.csv","Bayesian
+Lasso",0.529703074632582,0.46608146738885,4,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate_fold_5.csv","RKHS",0.494681011164477,0.375828415854153,5,"2016-17","Severe Drought"
+"2016-17
+Severe Drought","univariate_fold_5.csv","Bayesian
+Lasso",0.464482093068565,0.328022418850836,5,"2016-17","Severe Drought"
+"2016-17
+Optimal Flat","H","GBLUP",0.547424082834057,0.565595498595668,1,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H","HBLUP",0.786240621202785,0.691495033901805,1,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H","GBLUP+H",0.817379471439166,0.777680125752709,1,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_2.csv","GBLUP",0.530961384243001,0.535139655112408,2,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_2.csv","HBLUP",0.766071162287608,0.607893244664912,2,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_2.csv","GBLUP+H",0.802538261121177,0.726064465877597,2,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_3.csv","GBLUP",0.579075872829697,0.644413058600607,3,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_3.csv","HBLUP",0.796155280048913,0.581787327936167,3,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_3.csv","GBLUP+H",0.830309843983594,0.710425025270795,3,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_4.csv","GBLUP",0.566044168363537,0.574486896660816,4,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_4.csv","HBLUP",0.796592574428552,0.672956536044726,4,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_4.csv","GBLUP+H",0.836268621875375,0.76228701614723,4,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_5.csv","GBLUP",0.583498918703843,0.670319631797472,5,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_5.csv","HBLUP",0.827610516364988,0.559185162894884,5,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","H_fold_5.csv","GBLUP+H",0.859904117788208,0.709801053066819,5,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM","MegaLMM
+GBLUP",1.0497982483657,0.842713522491145,1,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_fold_2.csv","MegaLMM
+GBLUP",0.968667184770262,0.812117087430515,2,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_fold_3.csv","MegaLMM
+GBLUP",1.03576648202421,0.868482075091204,3,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_fold_4.csv","MegaLMM
+GBLUP",1.0486770459285,0.847031466554796,4,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_fold_5.csv","MegaLMM
+GBLUP",0.915668613288888,0.790450490734107,5,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_no2nd","MegaLMM
+GBLUP CV1",0.802883488734038,0.544573035332687,1,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_no2nd_fold_2.csv","MegaLMM
+GBLUP CV1",0.727339251527005,0.552246204764067,2,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_no2nd_fold_3.csv","MegaLMM
+GBLUP CV1",0.811298351719012,0.631974655447107,3,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_no2nd_fold_4.csv","MegaLMM
+GBLUP CV1",0.774651445457911,0.533498065730438,4,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_no2nd_fold_5.csv","MegaLMM
+GBLUP CV1",0.728267204266773,0.658701434911843,5,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_RKHS","MegaLMM
+RKHS",1.20217003266171,0.896545690979331,1,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_RKHS_fold_2.csv","MegaLMM
+RKHS",1.12664562928805,0.82991781782063,2,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_RKHS_fold_3.csv","MegaLMM
+RKHS",1.22157889650161,0.829440662569556,3,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_RKHS_fold_4.csv","MegaLMM
+RKHS",1.18632284015528,0.874451793619381,4,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","MegaLMM_RKHS_fold_5.csv","MegaLMM
+RKHS",1.12782160561517,0.769993289335637,5,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate","RKHS",0.875227232720021,0.692135096561368,1,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate","Bayesian
+Lasso",0.81113999784244,0.544959074940443,1,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate_fold_2.csv","RKHS",0.768204225082037,0.598394528340425,2,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate_fold_2.csv","Bayesian
+Lasso",0.732236287038773,0.558487296369118,2,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate_fold_3.csv","RKHS",0.887212369650387,0.716868906226997,3,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate_fold_3.csv","Bayesian
+Lasso",0.825739423106552,0.652501952177179,3,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate_fold_4.csv","RKHS",0.850974128426842,0.652635975285619,4,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate_fold_4.csv","Bayesian
+Lasso",0.79182402189063,0.558973629831597,4,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate_fold_5.csv","RKHS",0.783345650141524,0.762476340411499,5,"2016-17","Optimal Flat"
+"2016-17
+Optimal Flat","univariate_fold_5.csv","Bayesian
+Lasso",0.749508338460238,0.651327790451984,5,"2016-17","Optimal Flat"

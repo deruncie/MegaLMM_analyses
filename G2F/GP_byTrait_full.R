@@ -3,13 +3,14 @@ library(data.table)
 set_MegaLMM_nthreads(RcppParallel::defaultNumThreads()-1)
 
 id = as.numeric(commandArgs(t=T)[1])
-if(is.na(id)) id = 501
+if(is.na(id)) id = 101
 
 dataset = 0+id %/% 100
 seed = id %% 100
 
 files = list.files(path='BLUP_matrices/',pattern = 'csv')
 Y = read.csv(sprintf('BLUP_matrices/%s',files[dataset]),row.names=1)
+Y = Y[,apply(Y,2,var,na.rm=T)>0.05]
 data = data.frame(Pedigree_taxa = rownames(Y),stringsAsFactors = F)
 
 trait = sub('_BLUPs.csv','',files[dataset])
@@ -23,8 +24,8 @@ colnames(A_mat) = rownames(A_mat)
 
 all(rownames(Y) %in% rownames(A_mat))
 
-# runID = sprintf('/group/runciegrp/Projects/MegaLMM/G2F/MegaLMM_full_%s_%d',dataset,seed)
-runID = sprintf('MegaLMM_%s_%d',dataset,seed)
+runID = sprintf('/group/runciegrp/Projects/MegaLMM/G2F/MegaLMM_full_%s_%d',dataset,seed)
+# runID = sprintf('MegaLMM_%s_%d',dataset,seed)
 
 # run MegaLMM
 run_parameters = MegaLMM_control(
@@ -43,7 +44,7 @@ priors = MegaLMM_priors(
   tot_Y_var = list(V = 0.5,   nu = 10),      # Prior variance of trait residuals after accounting for fixed effects and factors
   tot_F_var = list(V = 18/20, nu = 20),     # Prior variance of factor traits. This is included to improve MCMC mixing, but can be turned off by setting nu very large
   Lambda_prior = list(
-    sampler = samLmple_Lambda_prec_horseshoe,
+    sampler = sample_Lambda_prec_horseshoe,
     prop_0 = 0.1,
     delta = list(shape = 3, scale = 1),
     delta_iterations_factor = 100
@@ -81,7 +82,7 @@ saveRDS(MegaLMM_state_base,file = sprintf('%s/MegaLMM_state_base.rds',runID))
 MegaLMM_state = initialize_MegaLMM(MegaLMM_state)
 MegaLMM_state = clear_Posterior(MegaLMM_state)
 
-MegaLMM_state$Posterior$posteriorSample_params = c('Lambda','F_h2','resid_h2','tot_Eta_prec')
+MegaLMM_state$Posterior$posteriorSample_params = c('Lambda','F_h2','resid_h2','tot_Eta_prec','F','U_F')
 MegaLMM_state$Posterior$posteriorMean_params = c('Eta','Eta_mean')
 MegaLMM_state = clear_Posterior(MegaLMM_state)
 
@@ -128,4 +129,9 @@ saveRDS(h2s,file = sprintf('G2F_byTrait_Gcors/h2s_%s_%d.rds',trait,seed))
 
 Lambda = get_posterior_mean(MegaLMM_state,Lambda,bychunk = T)
 saveRDS(Lambda,file = sprintf('G2F_byTrait_Gcors/Lambda_%s_%d.rds',trait,seed))
+
+F = get_posterior_mean(MegaLMM_state,F,bychunk = T)
+saveRDS(F,file = sprintf('G2F_byTrait_Gcors/F_%s_%d.rds',trait,seed))
+U_F = get_posterior_mean(MegaLMM_state,U_F,bychunk = T)
+saveRDS(U_F,file = sprintf('G2F_byTrait_Gcors/U_F_%s_%d.rds',trait,seed))
 

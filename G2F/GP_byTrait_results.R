@@ -49,6 +49,26 @@ results = foreach(trait. = traits,.combine = 'bind_rows') %dopar% {
     })
   }
 }
+results$traitID = trait_names[results$trait]
+
+write.csv(results,file = 'Results/collected_results.csv',row.names=F)
+
+
+library(ggplot2)
+library(mapdata)
+library(usmap)
+library(cowplot)
+library(ggthemes)
+library(dplyr)
+library(tidyr)
+source('my_pylo2map.R')
+library(geosphere)
+library(foreach)
+library(data.table)
+
+
+results = read.csv('Results/collected_results.csv')
+traits = unique(results$trait)[c(2,1,3,4)]
 
 summ = aggregate(cbind(BSFG_Eta,BSFG_U,rrBLUP,phenix_Y,phenix_U,means_U)~trait,results,FUN=mean)
 summ
@@ -72,7 +92,7 @@ summ_results$name = factor(summ_results$name,levels = unique(summ_results$name)[
 (p_accuracy <- ggplot(summ_results,aes(x=Trait,y=emmean)) +
     geom_errorbar(aes(group = interaction(name,Trait),ymin = lower.CL,ymax = upper.CL),position=position_dodge(),size=.5) +
     geom_bar(aes(group = interaction(name,Trait),fill = name),stat='identity',position = position_dodge()) +
-    scale_fill_discrete(name = 'Method') +
+    scale_fill_manual(name = 'Method',values=scales::hue_pal()(4)[c(2,3,4,1)]) +
     ylab('Estimated prediction accuracy')
 )
 save_plot('Figures/pred_accuracies.pdf',p_accuracy)
