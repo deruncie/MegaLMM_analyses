@@ -17,7 +17,7 @@ results$MegaLMM = results$Method %in% levels(results$Method)[-c(6:8)]
 (p1 <- ggplot(results,aes(x=Method,y=g_cor)) + 
     # stat_summary(geom = 'bar',fun = 'mean',aes(group = interaction(HTP,MegaLMM,Method),fill = !MegaLMM,color = CV1)) +
     # geom_bar(stat = 'summary',fun.y = 'mean',aes(group = interaction(HTP,MegaLMM,Method),fill = !MegaLMM)) +
-    geom_bar_pattern(stat = 'summary',fun = 'mean',aes(group = interaction(HTP,MegaLMM,Method),fill = !MegaLMM,pattern = CV1),
+    geom_bar_pattern(stat = 'summary',fun = 'mean',aes(group = interaction(HTP,MegaLMM,Method),fill = MegaLMM,pattern = CV1),
                      pattern_color = "grey40",
                      pattern_angle = 35,
                      pattern_density = 0.01,
@@ -27,6 +27,7 @@ results$MegaLMM = results$Method %in% levels(results$Method)[-c(6:8)]
     guides(fill = F,pattern=F) + #ylim(c(0,1)) +
     # scale_color_manual(values = c(NA,'black')) + 
     scale_pattern_manual(values = c('none','stripe')) + 
+    scale_fill_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1)],drop=FALSE) + 
     # xlab('Method') +
     xlab('') +
     ylab('Estimated prediction accuracy')+ theme_bw() + 
@@ -58,7 +59,7 @@ results$MegaLMM = results$Method %in% levels(results$Method)[-c(6:8)]
 
 (p3 <- ggplot(results,aes(x=Method2,y=g_cor)) + 
   # geom_boxplot(aes(group = interaction(Method2,Trial),color = Method2)) + 
-  geom_bar_pattern(stat = 'summary',fun = 'mean',aes(group = interaction(HTP,MegaLMM,Method),fill = !MegaLMM,pattern = CV1),
+  geom_bar_pattern(stat = 'summary',fun = 'mean',aes(group = interaction(HTP,MegaLMM,Method),fill = MegaLMM,pattern = CV1),
   # geom_boxplot_pattern(aes(group = interaction(HTP,MegaLMM,Method),fill = !MegaLMM,pattern = CV1),
                    pattern_color = "grey40",
                    pattern_angle = 35,
@@ -69,6 +70,7 @@ results$MegaLMM = results$Method %in% levels(results$Method)[-c(6:8)]
   facet_grid(trt~year,scales = 'free') + xlab('') + ylab('Estimated prediction accuracy') + labs(color = 'Method')+
   guides(fill = F,pattern=F) + #ylim(c(0,1)) +
   scale_pattern_manual(values = c('none','stripe')) + 
+  scale_fill_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1)],drop=FALSE) + 
   theme_bw() + 
   theme(axis.text.x = element_text(angle=90,hjust=1)))
 save_plot(p3,file = 'Figures/Krause_allTrials.pdf',base_height=8,base_asp=1)

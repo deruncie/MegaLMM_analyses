@@ -1,4 +1,5 @@
 *.DS_Store
+*.pdf
 G2F/*/
 Simulation/*/
 !Simulation/Results/
@@ -10,4 +11,5 @@ Results_At_1001*
 Results_G_accuracy_At_1001*
 Predictions_At_1001*
 Wheat_old*
+Wheat_new*
 Simulation_2*

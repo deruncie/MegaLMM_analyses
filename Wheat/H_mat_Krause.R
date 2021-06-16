@@ -99,6 +99,8 @@ pred_lme4qtl_KH = Kno %*% MASS::ginv(Koo) %*% u1 + Hno %*% MASS::ginv(Hoo) %*% u
 vars1 = as.data.frame(VarCorr(m1))
 h2_BLUE = vars1$vcov[1]/sum(vars1$vcov)
 
+preds = cbind(GBLUP=c(pred_lme4qtl_G),GBLUP_H=c(pred_lme4qtl_H),GBLUP_KH=c(pred_lme4qtl_KH))
+write.csv(preds,file = sprintf('predictions_H_fold_%d.csv',foldid))
 
 # results = rbind(
 #   data.frame(Method = 'GBLUP',

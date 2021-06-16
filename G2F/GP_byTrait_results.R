@@ -87,15 +87,18 @@ summ_results = foreach(trait. = traits,.combine = 'rbind') %do% {
   effects = summary(emmeans(res,spec = 'name'))
   data.frame(Trait = trait.,as.data.frame(effects))
 }
+summ_results$Trait = factor(summ_results$Trait,levels = unique(summ_results$Trait)[c(2,1,3,4)])
 position = position_dodge()
 summ_results$name = factor(summ_results$name,levels = unique(summ_results$name)[c(2,1,4,3)])
 (p_accuracy <- ggplot(summ_results,aes(x=Trait,y=emmean)) +
     geom_errorbar(aes(group = interaction(name,Trait),ymin = lower.CL,ymax = upper.CL),position=position_dodge(),size=.5) +
     geom_bar(aes(group = interaction(name,Trait),fill = name),stat='identity',position = position_dodge()) +
-    scale_fill_manual(name = 'Method',values=scales::hue_pal()(4)[c(2,3,4,1)]) +
-    ylab('Estimated prediction accuracy')
+    scale_fill_manual(name = 'Method',values=scales::brewer_pal(palette = 'Set2')(4)[c(3,4,1,2)]) +
+    # scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],drop=FALSE)
+    ylab('Estimated prediction accuracy') +
+    theme_cowplot() + background_grid(major = 'xy') + theme(legend.position = 'bottom') + guides(fill = guide_legend(nrow=2))
 )
-save_plot('Figures/pred_accuracies.pdf',p_accuracy)
+save_plot('Figures/pred_accuracies.pdf',p_accuracy,base_asp = 1,base_height = 5)
 
 
 #--------------------------------------#
@@ -156,9 +159,47 @@ for(loc in unique(fields_metadata$location)) {
   # +geom_point(data = fields_metadata_start,aes(x=long,y=lat),size=1)
   +geom_point(data = fields_metadata,aes(x=long,y=lat,color = Year),size=1)
 )
-
-
-
+# (ggplot(states,aes(long,lat)) +
+#     geom_polygon(aes(group=group),fill=NA,col=1,size=.2) + theme_map() 
+#     # +coord_cartesian(xlim = c(-104,-67),ylim = c(40,90))#
+#   + coord_map("albers",  lat0 = 90, lat1 = 40,xlim = c(-104,-67))
+#   # +geom_segment(data = cors_trait2,aes(x=Lon1,xend=Lon2,y=Lat1,yend=Lat2,color=cor),size=1)
+#   # +geom_point(data = fields_metadata_start,aes(x=long,y=lat),size=1)
+#   +geom_point(data = fields_metadata,aes(x=long,y=lat),size=2)
+#   # +geom_tile(data=na.omit(as.data.frame(r[[1]],xy=T)),aes(fill = bio1,x=x,y=y))
+# )
+# 
+# fields_metadata = fread('Data/fields_locations_allYears.csv',data.table=F)
+# states = map_data('state')
+# (ggplot(states,aes(long,lat)) +
+#     geom_polygon(aes(group=group),fill=NA,col=1,size=.2) + theme_map() 
+#   + coord_map("albers",  lat0 = 90, lat1 = 40,xlim = c(-104,-67))
+#   +geom_point(data = fields_metadata,aes(x=long,y=lat),size=2)
+# )
+# 
+# 
+# library(raster)
+# library(sp)
+# 
+# r <- getData("worldclim",var="bio",res=10)
+# r <- r[[c(1,12)]]
+# names(r) <- c("Temp","Prec")
+# plot(r[[1]])
+# spg = states
+# coordinates(spg) <- ~ x + y
+# # coerce to SpatialPixelsDataFrame
+# gridded(spg) <- TRUE
+# # coerce to raster
+# rasterDF <- raster(spg)
+# rasterDF
+# polys = tapply(1:nrow(states),states$group,function(x) Polygons(states[x,1:2],'A'))
+# SpatialPolygonsDataFrame(polys)
+# r2 = mask(r[[1]],SpatialPolygonsDataFrame(Polygon(states[,1:2])))
+# 
+# gtf = us[match(toupper(unique(states$region)),toupper(us$NAME_1)),]
+# r2 = mask(r[[2]],gtf)
+# plot(r2)
+          
 #--------------------------------------#
 # Statistical analysis of max_Gcor
 #--------------------------------------#

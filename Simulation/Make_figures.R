@@ -31,10 +31,13 @@ results3 = data.frame(p = 2^c(9:13,log2(p_max)));results3$time2 = results3$p/max
 my_comma = function(x) {
   scales::comma(x,accuracy = 0.001,trim = F)
 }
+my_power = function(x) {
+  sprintf('10^%d',log10(x))
+}
 exponential_funs = expand.grid(p = 2^(10:13),slope = c(3.4,0.5,1,2,3))
 MegaLMM_1024 = exp(mean(log(subset(results,Method == 'MegaLMM' & p==exponential_funs$p[1])$time2)))
 exponential_funs$time2 = (exponential_funs$p/(2^10))^exponential_funs$slope*MegaLMM_1024
-(p1 <- ggplot(results,aes(x=p,y=time2/3600))  + scale_y_log10(breaks = 10^(-4:10),labels = my_comma) +
+(p1 <- ggplot(results,aes(x=p,y=time2/3600))  + scale_y_log10(breaks = 10^(-4:10),labels = trans_format("log10", math_format(10^.x))) +
     scale_x_continuous(breaks = unique(results$p),trans = scales::log2_trans()) + ylab('Hours') + xlab('# traits') +
     geom_smooth(aes(color=Method,group=Method),se=F) 
   +geom_line(data = results2,aes(x=p,y=(2^log_time2)/3600,color=Method,group=Method),linetype = 2,size=1)
@@ -42,6 +45,7 @@ exponential_funs$time2 = (exponential_funs$p/(2^10))^exponential_funs$slope*Mega
   + geom_line(data = subset(exponential_funs,slope <= 3),aes(group = slope),color = 'grey70')
   + geom_text(data = subset(exponential_funs,p == 2^13 & slope <= 3),aes(x=1.3*p,y=time2/3600,label = slope))
   + geom_text(data = subset(exponential_funs,p == 2^13 & slope > 3),aes(x=1.3*p,y=time2/3600,label = 'Rate'))
+  + scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],drop=FALSE)
   +geom_point(aes(color=Method,group=Method),position = position_dodge(width=.2)) + theme_cowplot() + background_grid(major = 'xy')
 )
 
@@ -72,6 +76,7 @@ g_cors$p2 = factor(g_cors$p)
     geom_hline(yintercept=mean(g_cors_rrBLUP$g_cor)) +
     geom_text(data = ks,y=max(ks$height,na.rm=T),aes(label = k),color = scales::hue_pal()(4)[1]) + 
     scale_x_continuous(breaks = unique(log2(g_cors$p)),labels = unique(g_cors$p)) +
+    scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],drop=FALSE) + 
     theme_cowplot() + background_grid(major = 'xy')
 )
 # dev.off()
@@ -85,9 +90,10 @@ save_plot(filename = sprintf('%s_results.pdf',set),p3,base_asp = 2,base_height =
 
 
 # Now with varying K
-(p1b <- ggplot(MegaLMM_results,aes(x=p,y=time2/3600))  + scale_y_log10(breaks = 10^(-4:10),labels = my_comma) +
+(p1b <- ggplot(MegaLMM_results,aes(x=p,y=time2/3600))  + scale_y_log10(breaks = 10^(-4:10),labels= trans_format("log10", math_format(10^.x))) +
     scale_x_continuous(breaks = unique(MegaLMM_results$p),trans = scales::log2_trans()) + ylab('Hours') + xlab('# traits') +
     geom_smooth(aes(color=Method,group=Method),se=F) 
+  + scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(6)[c(1,2,3)],drop=FALSE)
   +geom_point(aes(color=Method,group=Method),position = position_dodge(width=.4)) + theme_cowplot() + background_grid(major = 'xy')
 )
 # dev.off()
@@ -100,6 +106,7 @@ g_cors$p2 = factor(g_cors$p)
     geom_smooth(aes(color=Method,group=Method),se=F) +
     geom_hline(yintercept=mean(g_cors_rrBLUP$g_cor)) +
     scale_x_continuous(breaks = unique(log2(g_cors$p)),labels = unique(g_cors$p)) +
+    scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(6)[c(1,2,3)],drop=FALSE) +
     theme_cowplot() + background_grid(major = 'xy')
 )
 # dev.off()
@@ -125,7 +132,8 @@ g_cors_wide = pivot_wider(bind_rows(g_cors,g_cors_rrBLUP),id_cols = c('p','trait
 g_cors_tall = pivot_longer(g_cors_wide,cols = -c('p','trait','MegaLMM'))
 g_cors_tall$Method = g_cors_tall$name
 (p5 <- ggplot(subset(g_cors_tall,p < 1000),aes(y=MegaLMM,x=value)) + geom_point(aes(color = Method),size=1) + facet_wrap(~p) + geom_abline(slope=1,intercept=0) +
-    scale_color_manual(values = c(scales::hue_pal()(4)[-1],'grey70'),drop=FALSE) + 
+    # scale_color_manual(values = c(scales::hue_pal()(4)[-1],'grey70'),drop=FALSE) + 
+    scale_color_manual(values = c(scales::brewer_pal(palette = 'Set2')(4)[c(1,3,4)],'grey70'),drop=FALSE) +
     ylab('MegaLMM') + xlab('Alternative method')# + theme(legend.position = c(.65,.1),legend.direction = 'horizontal')
 )
 
@@ -142,6 +150,7 @@ dodge_width = .5
     geom_pointrange(fatten=2,stat="summary", fun.data="mean_se",aes(color = Method,group=Method),position = position_dodge2(width=dodge_width,preserve = 'single')) +
     geom_smooth(aes(color=Method,group=Method),se=F) +
     scale_x_continuous(breaks = unique(log2(results$p)),labels = unique(results$p)) +
+    scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],drop=FALSE) + 
     theme_cowplot() + background_grid(major = 'xy')
 )
 
@@ -149,6 +158,7 @@ dodge_width = .5
     geom_pointrange(fatten=2,stat="summary", fun.data="mean_se",aes(color = Method,group=Method),position = position_dodge2(width=dodge_width,preserve = 'single')) +
     geom_smooth(aes(color=Method,group=Method),se=F) +
     scale_x_continuous(breaks = unique(log2(results$p)),labels = unique(results$p)) +
+    scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],drop=FALSE) + 
     theme_cowplot() + background_grid(major = 'xy')
 )
 leg = get_legend(p1 + theme(legend.position = 'bottom',legend.justification = 'center'))
