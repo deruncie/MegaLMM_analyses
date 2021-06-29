@@ -5,6 +5,7 @@ library(plyr)
 library(dplyr)
 library(DescTools)
 library(tidyr)
+library(scales)
 
 
 
@@ -47,6 +48,7 @@ exponential_funs$time2 = (exponential_funs$p/(2^10))^exponential_funs$slope*Mega
   + geom_text(data = subset(exponential_funs,p == 2^13 & slope > 3),aes(x=1.3*p,y=time2/3600,label = 'Rate'))
   + scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],drop=FALSE)
   +geom_point(aes(color=Method,group=Method),position = position_dodge(width=.2)) + theme_cowplot() + background_grid(major = 'xy')
+  + theme(axis.text.x = element_text(size = 12,angle=45,hjust=1,vjust=0.99))
 )
 
 # Figure 1B accuracy comparisons among methods
@@ -67,26 +69,26 @@ ks$k = pmin(166,pmax(4,ks$p/2))
 MegaLMM_means = aggregate(g_cor~p,subset(g_cors,Method == 'MegaLMM'),mean)
 ks$height = cummax(MegaLMM_means$g_cor[match(ks$p,MegaLMM_means$p)] + .06)
 
-dodge_width = .5
+dodge_width = .5å
 g_cors$p2 = factor(g_cors$p)
 (p2 <- ggplot(g_cors,aes(x=log2(p),y=g_cor)) + ylab('Estimated prediction accuracy') + xlab('# traits') +
     geom_pointrange(fatten=2,stat="summary", fun.data="mean_se",aes(color = Method,group=Method),position = position_dodge2(width=dodge_width,preserve = 'single')) +
     geom_smooth(aes(color=Method,group=Method),se=F) +
-    geom_pointrange(data = g_cors_rrBLUP, fatten=2,stat="summary", fun.data="mean_se",color = 'grey30',aes(group=Method),position = position_dodge2(width=dodge_width,preserve = 'single')) +
-    geom_hline(yintercept=mean(g_cors_rrBLUP$g_cor)) +
+    geom_pointrange(data = subset(g_cors_rrBLUP,p==4), fatten=2,stat="summary", fun.data="mean_se",color = 'grey30',aes(group=Method),position = position_dodge2(width=dodge_width,preserve = 'single')) +
+    # geom_hline(yintercept=mean(g_cors_rrBLUP$g_cor)) +
     geom_text(data = ks,y=max(ks$height,na.rm=T),aes(label = k),color = scales::hue_pal()(4)[1]) + 
     scale_x_continuous(breaks = unique(log2(g_cors$p)),labels = unique(g_cors$p)) +
-    scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],drop=FALSE) + 
-    theme_cowplot() + background_grid(major = 'xy')
+    scale_color_manual(values = c(scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],'black'),limits = c(levels(g_cors$Method),'rrBLUP'),drop=FALSE) + 
+    theme_cowplot() + background_grid(major = 'xy') + theme(axis.text.x = element_text(size = 12,angle=45,hjust=1,vjust=0.99))
 )
 # dev.off()
 
-leg = get_legend(p2 + theme(legend.position = 'bottom',legend.justification = 'center'))
+leg = get_legend(p2 + theme(legend.position = 'bottom',legend.justification = 'center',legend.title = element_blank()))
 nl = theme(legend.position = 'none')
 (p3 <- plot_grid(plot_grid(p2+nl,p1+nl,labels = c('A','B')),leg,nrow = 2,rel_heights = c(1,.2)))
 
 set = 'At_1001'
-save_plot(filename = sprintf('%s_results.pdf',set),p3,base_asp = 2,base_height = 7)
+save_plot(filename = sprintf('%s_results.pdf',set),p3,base_asp = 2,base_height = 5)
 
 
 # Now with varying K

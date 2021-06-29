@@ -75,13 +75,13 @@ summ
 
 
 results_subset = results[,c('trait','i','SiteYear','BSFG_Eta','phenix_Y','means_U','rrBLUP')]
-colnames(results_subset)[4:7] = c('MegaLMM','phenix','GBLUP(env BLUPs)','GBLUP(univariate)')
+colnames(results_subset)[4:7] = c('MegaLMM','phenix','GBLUP\n(env BLUPs)','GBLUP\n(univariate)')
 
 library(emmeans)
 summ_results = foreach(trait. = traits,.combine = 'rbind') %do% {
   results_trait = subset(results_subset,trait == trait.)
   # results_trait_means = aggregate(cbind(BSFG_Eta,BSFG_U,rrBLUP,phenix_Y,phenix_U,means_U)~SiteYear+trait,results_trait,FUN=mean)
-  results_trait_means = aggregate(cbind(MegaLMM,phenix,`GBLUP(env BLUPs)`,`GBLUP(univariate)`)~SiteYear+trait,results_trait,FUN=mean)
+  results_trait_means = aggregate(cbind(MegaLMM,phenix,`GBLUP\n(env BLUPs)`,`GBLUP\n(univariate)`)~SiteYear+trait,results_trait,FUN=mean)
   results_trait_means_tall = pivot_longer(results_trait_means,cols = -c(1:2))
   res = lm(value ~ SiteYear + name,results_trait_means_tall)
   effects = summary(emmeans(res,spec = 'name'))
@@ -96,9 +96,11 @@ summ_results$name = factor(summ_results$name,levels = unique(summ_results$name)[
     scale_fill_manual(name = 'Method',values=scales::brewer_pal(palette = 'Set2')(4)[c(3,4,1,2)]) +
     # scale_color_manual(values = scales::brewer_pal(palette = 'Set2')(4)[c(2,1,3,4)],drop=FALSE)
     ylab('Estimated prediction accuracy') +
-    theme_cowplot() + background_grid(major = 'xy') + theme(legend.position = 'bottom') + guides(fill = guide_legend(nrow=2))
+    theme_cowplot() + background_grid(major = 'xy') + 
+    theme(legend.position = 'bottom') + xlab('') + 
+    guides(fill = guide_legend(nrow=1,title = ''))
 )
-save_plot('Figures/pred_accuracies.pdf',p_accuracy,base_asp = 1,base_height = 5)
+save_plot('Figures/pred_accuracies.pdf',p_accuracy,base_asp = 1,base_height = 5.5)
 
 
 #--------------------------------------#

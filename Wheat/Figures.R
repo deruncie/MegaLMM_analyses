@@ -31,7 +31,7 @@ results$MegaLMM = results$Method %in% levels(results$Method)[-c(6:8)]
     # xlab('Method') +
     xlab('') +
     ylab('Estimated prediction accuracy')+ theme_bw() + 
-    theme(axis.text.x = element_text(angle=45,vjust = .5),panel.grid.major = element_line())) 
+    theme(axis.text.x = element_text(angle=45,vjust = 1,hjust=1),panel.grid.major = element_line())) 
 
 G_cor_results = read.csv('G_cor_results.csv')
 (p2 <- ggplot(G_cor_results,aes(x=wavelength)) +
@@ -42,10 +42,10 @@ G_cor_results = read.csv('G_cor_results.csv')
     geom_line(aes(y = P_cor,col = 'Phenotypic')) +
     scale_color_manual(values=c('Genetic' = 'red','Phenotypic' = 'black'),name = 'Correlation') +
     xlab('Wavelength') + ylab('Correlation') +
-    theme_bw() + theme(legend.position = c(.8,.15)))
+    theme_bw() + theme(legend.position = c(.8,.15),axis.text.x = element_text(angle=45,vjust = 1,hjust=1)))
 
 (p <- plot_grid(p1,p2,labels = c('A','B')))
-save_plot(p,file = 'Figures/Krause_results_panels.pdf',base_asp = 2,base_height = 7)
+save_plot(p,file = 'Figures/Krause_results_panels.pdf',base_asp = 2,base_height = 5)
 
 
 # Supplements: all trials
